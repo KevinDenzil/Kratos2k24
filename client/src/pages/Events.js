@@ -18,7 +18,7 @@ const Events = () => {
 
   return (
     <div>
-      <h1>{category} Events</h1>
+      <h1>{category}</h1>
       <div className="container">
         {Object.keys(events).map((eventName) => (
           <EventCard
