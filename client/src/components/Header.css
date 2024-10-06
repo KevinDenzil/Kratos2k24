@@ -1,75 +1,144 @@
 /* Header.css */
+@font-face {
+  font-family: 'Neutrons';
+  src: url('/public/NeutronsDemoRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #333;
+*,*::after, *::before {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  padding-top: 8vh;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
   color: white;
 }
 
-.navbar-left {
+nav {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  height: 8vh;
+  background: black;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  padding: 0 2rem;
+}
+
+.logo-container {
+  position: relative;
+  height: 12vh;
+  margin-top: 2vh;
 }
 
 .logo {
-  height: 40px;
-  margin-right: 10px;
+  height: 100%;
+  animation: float 3s ease-in-out infinite;
+  cursor: pointer;
 }
 
-.navbar-center {
-  display: flex;
-  gap: 15px;
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
-.nav-link {
-  color: white;
-  text-decoration: none;
-}
-
-.nav-link:hover {
-  text-decoration: underline;
-}
-
-.navbar-right {
+.nav_menu {
   display: flex;
   align-items: center;
+  gap: 3rem;
 }
 
-.cart-btn {
-  background-color: #28a745;
-  color: white;
-  border: none;
-  padding: 10px 15px;
+.nav_toggler {
   cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.cart-btn:hover {
-  background-color: #218838;
-}
-
-.dropdown {
-  position: relative;
-}
-
-.dropdown-menu {
-  position: absolute;
-  right: 0;
-  background-color: white;
-  color: black;
-  border: 1px solid #ccc;
-  padding: 10px;
   display: none;
 }
 
-.dropdown-toggle {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 18px;
+.nav_toggler div {
+  width: 2.5rem;
+  height: 0.2rem;
+  margin: 0.4rem;
+  background: white;
+  transition: 0.4s ease-in;
+}
+
+.cart-container {
+  display: flex;
+  align-items: center;
   cursor: pointer;
+  color: white;
+}
+
+.cart-icon {
+  font-size: 2.4rem;
+}
+
+.cart-count {
+  background-color: transparent;
+  color: white;
+  border-radius: 50%;
+  padding: 0.2rem 0.6rem;
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .nav_toggler {
+    display: block;
+  }
+  .nav_menu {
+    position: fixed;
+    top: 8vh;
+    right: 0;
+    width: 50%;
+    height: 92vh;
+    background: black;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: 0.5s ease-in;
+  }
+
+  .nav_active {
+    transform: translateX(0%);
+  }
+  
+  .logo-container {
+    height: 10vh;
+  }
+}
+
+/* Toggler Animation */
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-4px, 5px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-4px, -5px);
 }

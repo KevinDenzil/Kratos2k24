@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+* {
+  box-sizing: border-box;
+}
+/* 
+body {
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  min-height: 100vh;
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+} */
+
+h1 {
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white; /* Make the header white */
+}
+
+.countdown-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  scale:2.3;
+}
+
+.countdown-item {
+  color: #fff; /* Change text color to white */
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 30px;
+  margin: 10px;
+  padding-top: 10px;
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.countdown-item span {
+  color: #fff; /* Change label text color to white */
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.countdown-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+}
+
+footer {
+  background-color: #222;
+  color: #fff;
+  font-size: 14px;
+  bottom: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 999;
+}
+
+footer p {
+  margin: 10px 0;
+}
+
+footer i {
+  color: red;
+}
+
+footer a {
+  color: #3c97bf;
+  text-decoration: none;
+}
+
+/* Countdown.css updates */
+.countdown-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  scale: 2.3;
+}
+
+/* Media queries for Countdown component */
+@media screen and (max-width: 768px) {
+  .countdown-wrapper {
+    scale: 1.2;
+    gap: 10px;
+  }
+
+  .countdown-item {
+    width: 80px;
+    height: 80px;
+    font-size: 30px;
+    margin: 5px;
+  }
+
+  .countdown-svg {
+    width: 80px;
+    height: 80px;
+  }
+
+  .countdown-item span {
+    font-size: 10px;
+  }
+}
+
+/* For even smaller screens */
+@media screen and (max-width: 380px) {
+  .countdown-wrapper {
+    scale: 1;
+  }
+
+  .text-box {
+    font-size: 120px;
+  }
+}

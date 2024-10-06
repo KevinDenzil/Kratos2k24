@@ -2,3 +2,18 @@ a {
   text-decoration: none !important;
   color : inherit !important
 }
+
+body {
+  background-color: black;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding-top: 60px; /* Adjust this value based on your navbar's height */
+}

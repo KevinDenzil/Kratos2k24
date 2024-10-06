@@ -1,44 +1,32 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
 import { eventData } from '../EventDetails';
-import './Events.css'; 
+import './Events.css';
 import EventCard from '../components/EventCard';
-import { CartContext } from '../CartStatus'; 
 
 const Events = () => {
   const { category: rawCategory } = useParams();
   const category = decodeURIComponent(rawCategory);
   const events = eventData[category];
 
-  const { cart, addToCart } = useContext(CartContext); 
-
   if (!events) {
-    return <div>Category not found!</div>;
+    return <div className="events-page"><h1>Category not found!</h1></div>;
   }
 
   return (
-    <div>
+    <div className="events-page">
       <h1>{category}</h1>
-      <div className="container">
-        {Object.keys(events).map((eventName) => (
+      <div className="events-container">
+        {Object.entries(events).map(([eventName, eventDetails]) => (
           <EventCard
             key={eventName}
             eventName={eventName}
-            description={events[eventName].desc}
-            teamSize={events[eventName].team_size}
-            price={events[eventName].price}
-            onAddToCart={() => addToCart(eventName)} 
+            icon={eventDetails.icon}
+            teamSize={eventDetails.team_size}
+            price={eventDetails.price}
           />
         ))}
       </div>
-      {/* <div className="cartSummary">
-        <h2>Cart</h2>
-        <ul>
-          {cart.map((item, index) => (
-            <li key={index}>{item}</li>
-          ))}
-        </ul>
-      </div> */}
     </div>
   );
 };

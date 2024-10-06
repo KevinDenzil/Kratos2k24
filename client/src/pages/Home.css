@@ -1,0 +1,293 @@
+@font-face {
+    font-family: 'Dimitri';
+    src: url('/public/DIMITRI_.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap');
+
+body {
+    background-color: #28282B;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 0; /* Removes any padding above the logo */
+    margin-top: 0; 
+    width: 100vw;
+    margin-left: 0; /* Ensures no margin is pushing the content down */
+}
+
+/*===================*/
+/* CONTINUOUS BOB
+/*===================*/
+@-webkit-keyframes bob {
+    0% {
+      -webkit-transform: translateY(-8px) scale(0.4);
+      transform: translateY(-8px) scale(0.4);
+    }
+    50% {
+      -webkit-transform: translateY(-4px) scale(0.4);
+      transform: translateY(-4px) scale(0.4);
+    }
+    100% {
+      -webkit-transform: translateY(-8px) scale(0.4);
+      transform: translateY(-8px) scale(0.4);
+    }
+  }
+  @keyframes bob {
+    0% {
+      -webkit-transform: translateY(-8px) scale(0.4);
+      transform: translateY(-8px) scale(0.4);
+    }
+    50% {
+      -webkit-transform: translateY(-4px) scale(0.4);
+      transform: translateY(-4px) scale(0.4);
+    }
+    100% {
+      -webkit-transform: translateY(-8px) scale(0.4);
+      transform: translateY(-8px) scale(0.4);
+    }
+  }
+  
+  .logo2 {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0) scale(0.4);
+    transform: perspective(1px) translateZ(0) scale(0.4);
+    max-width: 100%;
+    height: auto;
+    -webkit-animation: bob 1.5s ease-in-out infinite;
+    animation: bob 1.5s ease-in-out infinite;
+    transform-origin: top center;
+    margin-bottom: -60%;
+    margin-top: 10%;
+  }
+
+  /* h1 {
+    font-family: 'Dimitri', sans-serif;
+    font-weight: 200;
+    font-size: 80px;
+    position: relative;
+    color: #000; 
+    text-shadow: 
+        -1px -1px 0 #ff1a1a,
+         1px -1px 0 #ff1a1a,
+        -1px  1px 0 #ff1a1a,
+         1px  1px 0 #ff1a1a,
+        2px 2px 1px #000;
+    background: linear-gradient(135deg, 
+        #ff4d4d 10%,
+        #ff1a1a 50%,
+        #cc0000 90%);
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+h1::before {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: linear-gradient(135deg,
+        rgba(255,255,255,0.4) 10%,
+        transparent 50%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    z-index: 1;
+} */
+
+h1 {
+    /* color: #F70E14; */
+    color : white;
+    font-family: 'Dimitri', sans-serif;
+    font-weight: 200;
+    font-size: 100px;
+    text-shadow: -2px -2px 0 black, 2px -2px 0 black, -4px 4px 0 black, 8px 8px 0 black;
+  }
+
+/* Styling for the video container */
+/* .video {
+    position: relative; 
+    width: 100%; 
+    height: auto;
+    align-items: center;
+    justify-content: center;
+  } */
+  
+  /* Background video styling */
+  .background-video {
+    width: 100%;
+   height: auto;
+   /* object-fit: cover; */
+   position: absolute;
+   left: 0;
+   right: 0;
+   top: 0;
+   bottom: 0;
+   z-index: -1;
+  }
+
+
+  
+  /* Ensuring other elements inside the .video container appear above the video */
+  .logo2, h1 {
+    position: relative;
+    z-index: 1; /* Ensures elements stay above the video */
+  }
+  
+.container_front {
+    display : flex;
+
+}
+
+.cont {
+    width : 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.container video{
+    width : 100%;
+    height : 100%;
+
+}
+
+.text-box {
+    position: absolute;
+    top: 0;
+    left:0;
+    background: #000;
+    height:100%;
+    width:100%;
+    color:#FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:420px;
+    font-weight: 900;
+    mix-blend-mode: multiply;
+    font-family: 'Dimitri', sans-serif;
+
+    
+}
+
+.panel {
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .section {
+    width: 100%;
+    height: 100vh;
+  }
+
+.countdown{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    gap: 100px;
+}
+
+.countdown h1 {
+    /* color: #F70E14; */
+    color : white;
+    font-size: 130px;
+    /* text-shadow: -2px -2px 0 black, 2px -2px 0 black, -4px 4px 0 black, 8px 8px 0 black; */
+    font-family: "Unica One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+/* Home.css updates */
+.cont {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Existing styles remain the same */
+
+  .text-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(120px, 20vw, 420px); /* Increased base size and clamp values */
+    font-weight: 900;
+    mix-blend-mode: multiply;
+    font-family: 'Dimitri', sans-serif;
+    padding: 20px;
+    text-align: center;
+    line-height: 1;
+}
+
+/* Larger screens */
+@media screen and (min-width: 1200px) {
+    .text-box {
+        font-size: clamp(200px, 18vw, 420px);
+    }
+}
+
+/* Medium screens */
+@media screen and (max-width: 1199px) and (min-width: 769px) {
+    .text-box {
+        font-size: clamp(150px, 16vw, 300px);
+    }
+}
+
+/* Mobile screens */
+@media screen and (max-width: 768px) {
+    .text-box {
+        font-size: clamp(80px, 14vw, 200px);
+    }
+    
+    .countdown h1 {
+        font-size: clamp(40px, 8vw, 60px);
+    }
+}
+
+/* Small mobile screens */
+@media screen and (max-width: 480px) {
+    .text-box {
+        font-size: clamp(60px, 13vw, 150px);
+    }
+}
+
+/* Adjust for different aspect ratios */
+@media screen and (max-height: 600px) {
+    .text-box {
+        font-size: clamp(60px, 12vw, 200px);
+    }
+}
