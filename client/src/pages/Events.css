@@ -1,24 +1,31 @@
-/* Events.css */
-
-.container {
+.events-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
   padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-h1 {
+.events-page {
+  background-color: black;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.events-page h1 {
+  color: white;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
-.cartSummary {
-  margin-top: 30px;
-  text-align: center;
-}
+@media screen and (max-width: 768px) {
+  .events-container {
+    padding: 10px;
+  }
 
-.cartSummary ul {
-  list-style-type: none;
-  padding: 0;
+  .events-page h1 {
+    font-size: 2em;
+  }
 }
