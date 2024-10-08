@@ -15,9 +15,10 @@
 }
 
 .events-page h1 {
-  color: white;
+  color: #B43839;
   text-align: center;
   margin-bottom: 30px;
+
 }
 
 @media screen and (max-width: 768px) {

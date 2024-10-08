@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { getEventData } from '../EventDetails';
-import { CartContext } from '../CartStatus'; // Adjust the import path as needed
-import { FaUser, FaUserFriends, FaUsers, FaTrophy } from "react-icons/fa";
+import { CartContext } from '../context/CartStatus'; // Adjust the import path as needed
+import { FaUser, FaUserFriends, FaUsers, FaTrophy,FaShoppingCart  } from "react-icons/fa";
 import { FaIndianRupeeSign } from "react-icons/fa6";
 import './EventPage.css';
 
@@ -13,11 +13,16 @@ const EventPage = () => {
   const eventDetails = getEventData(decodedEventName);
   const { cart, addToCart } = useContext(CartContext);
 
-  const isInCart = cart.includes(decodedEventName);
+  const isInCart = cart.some(item => item.name === decodedEventName);
 
   const handleAddToCart = () => {
     if (!isInCart) {
-      addToCart(decodedEventName);
+      addToCart({
+        name: decodedEventName,
+        price: eventDetails.price,
+        icon: eventDetails.icon,
+        team_size: eventDetails.team_size
+      });
     }
   };
 
@@ -125,11 +130,17 @@ const EventPage = () => {
         </div>
 
         <button 
-          className="add-to-cart-btn" 
+          className={`add-to-cart-btn ${isInCart ? 'added' : ''}`}
           onClick={handleAddToCart}
           disabled={isInCart}
         >
-          {isInCart ? 'Added' : 'Add to Cart'}
+          {isInCart ? (
+            <>
+              <FaShoppingCart /> In Cart
+            </>
+          ) : (
+            'Add to Cart'
+          )}
         </button>
       </div>
     </div>

@@ -16,7 +16,7 @@
   transform: translateY(-5px);
 }
 
-.icon-container {
+.icon-container { 
   flex: 1;
   display: flex;
   justify-content: center;
@@ -37,7 +37,7 @@
 
 .event-info h3 {
   margin: 0 0 8px 0;
-  font-size: 1.9em;
+  font-size: 2.7em;
   color: white;
   align-self: center;
 }
@@ -45,14 +45,14 @@
 .event-details {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 30%;
   color: #cccccc;
 }
 
 .team-size, .price {
   display: flex;
   align-items: center;
-  font-size: 1.3em;
+  font-size: 1.5em;
 }
 
 .team-size svg, .price svg {

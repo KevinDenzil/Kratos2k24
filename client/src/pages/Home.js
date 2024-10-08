@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import Countdown from '../components/Countdown';
-import backgroundVideo from '../assets/fire.mp4';
+import backgroundVideo from '../assets/firevideo.mp4';
 import TransitionContext from '../context/TransitionContext';
 import './Home.css';
 
@@ -82,3 +82,4 @@ const Home = () => {
 };
 
 export default Home;
+
