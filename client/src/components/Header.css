@@ -71,7 +71,13 @@ nav {
   display: flex;
   align-items: center;
   gap: 3rem;
+
 }
+
+.nav_menu li :hover{
+  color : #B43839;
+}
+
 
 .nav_toggler {
   cursor: pointer;

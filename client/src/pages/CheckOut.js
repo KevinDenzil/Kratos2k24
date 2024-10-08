@@ -25,7 +25,7 @@ const CheckOut = () => {
     formData.append('totalPrice', totalPrice.toString());
   
     try {
-      const response = await fetch('http://prad18.pythonanywhere.com/event/', {
+      const response = await fetch('https://prad18.pythonanywhere.com/event/', {
         method: 'POST',
         body: formData,
       });
