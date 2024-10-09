@@ -43,7 +43,7 @@ class Countdown extends Component {
     }
 
     return (
-      <div>
+      <div className = "countdown-container">
         {/* <h1>Countdown</h1> */}
         <div className="countdown-wrapper">
           {days && (

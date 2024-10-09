@@ -178,7 +178,7 @@ const eventData = {
         "Bid to Predict": { 
             "desc": "Welcome to an exhilarating mix of technical and non-technical challenges, designed for participants with varying levels of coding knowledge! This two-round event offers a chance for teams to solve fun, interactive tasks that blend problem-solving with machine learning. (NOTE: cheat sheets will be provided for beginners)", 
             "team_size": 3, 
-            "price": "100", 
+            "price": "50", 
             icon: <FaChartLine />, 
             rules: {
                     "round1":[
@@ -196,7 +196,7 @@ const eventData = {
         "The Code Gambit": { 
             "desc": "Welcome to the ultimate test of strategic thinking and coding! In this challenge, you will design and develop a bot that competes against other bots in a series of decision-making rounds. Your objective? Maximize your score by making the right choices over time.", 
             "team_size": 3, 
-            "price": "150",
+            "price": "50",
             icon : <GiCardRandom />, 
             rules: [
                 "Input:  Each round, your bot will receive the opponent's previous move—either \"c\" (cooperate) or \"d\" (defect).",

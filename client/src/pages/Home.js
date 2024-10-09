@@ -53,7 +53,7 @@ const Home = () => {
         <div className='cont'>
           <video autoPlay loop muted playsInline className="background-video">
             <source src={`${process.env.PUBLIC_URL}/firevideo.webm`} type="video/webm" />
-            <source src={`${process.env.PUBLIC_URL}/firevideo.mp4`} type="video/mp4" />
+            {/* <source src={`${process.env.PUBLIC_URL}/firevideo.mp4`} type="video/mp4" /> */}
           </video>
           {isMobile && (
             <div className="mobile-logo-container">
@@ -69,7 +69,7 @@ const Home = () => {
       <section ref={addToRefs} className='panel info'>
       <video autoPlay loop muted playsInline className="embed-video">
         <source src={`${process.env.PUBLIC_URL}/kratosvid.webm`} type="video/webm" />
-        <source src={`${process.env.PUBLIC_URL}/kratosvid.mp4`} type="video/mp4" />
+        {/* <source src={`${process.env.PUBLIC_URL}/kratosvid.mp4`} type="video/mp4" /> */}
         <div className="info-content">
           <h2>About Kratos '24</h2>
           <p>Add your description or any other content here</p>

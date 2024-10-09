@@ -100,8 +100,14 @@ footer a {
 @media screen and (max-width: 768px) {
   .countdown-wrapper {
     scale: 1.2;
-    gap: 10px;
+    gap: 40px;
     flex-direction: column;
+    width : 100%;
+  }
+
+  .countdown-container {
+    height : 60%;
+    width : 80%;
   }
 
   .countdown-item {
