@@ -52,6 +52,7 @@ const Home = () => {
       <section ref={addToRefs} className='panel initial'>
         <div className='cont'>
           <video autoPlay loop muted playsInline className="background-video">
+            <source src={`${process.env.PUBLIC_URL}/firevideo.webm`} type="video/webm" />
             <source src={`${process.env.PUBLIC_URL}/firevideo.mp4`} type="video/mp4" />
           </video>
           {isMobile && (
