@@ -4,6 +4,9 @@ import { getEventData } from '../EventDetails';
 import { CartContext } from '../context/CartStatus';
 import { FaUser, FaUserFriends, FaUsers, FaTrophy, FaShoppingCart } from "react-icons/fa";
 import { FaIndianRupeeSign } from "react-icons/fa6";
+import { AiOutlineRollback } from "react-icons/ai";
+import { MdArrowBack } from "react-icons/md";
+
 import './EventPage.css';
 
 const EventPage = () => {
@@ -76,17 +79,25 @@ const EventPage = () => {
 
   return (
     <div className="event-page">
+      
       <button className="back-button" onClick={() => navigate(-1)}>
         Go Back
       </button>
+      
       <div className="event-poster-container">
         {posterSrc && <img src={posterSrc} alt={`${decodedEventName} poster`} className="event-poster" />}
       </div>
       <div className="event-content">
-        <h1 className="event-title">
-          {eventDetails.icon && <span className="event-icon">{eventDetails.icon}</span>}
-          {decodedEventName}
-        </h1>
+      <div className="title-container">
+    <MdArrowBack 
+      className="icon-back-button" 
+      onClick={() => navigate(-1)} 
+    />
+    <h1 className="event-title">
+      {eventDetails.icon && <span className="event-icon">{eventDetails.icon}</span>}
+      {decodedEventName}
+    </h1>
+  </div>
         <div className="details-container">
           <div className="detail-row">
             <div className="detail-item">
@@ -127,7 +138,8 @@ const EventPage = () => {
                     <h4>Winner</h4>
                     <div className="prize-amount">
                       <FaIndianRupeeSign />
-                      <span>{eventDetails.prizes[0]}</span>
+                      {/* <span>{eventDetails.prizes[0]}</span> */}
+                      <span>Cash Prize</span>
                     </div>
                   </div>
                 )}
@@ -137,7 +149,8 @@ const EventPage = () => {
                     <h4>Runner Up</h4>
                     <div className="prize-amount">
                       <FaIndianRupeeSign />
-                      <span>{eventDetails.prizes[1]}</span>
+                      {/* <span>{eventDetails.prizes[1]}</span> */}
+                      <span>Cash Prize</span>
                     </div>
                   </div>
                 )}

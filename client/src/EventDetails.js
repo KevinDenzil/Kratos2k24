@@ -15,8 +15,8 @@ const eventData = {
     "Technical Events": {
         "Paper Presentation": { 
             "desc": "Presenting the paper in IEEE format and sharing unique ideas in the technical domain.", 
-            "team_size": 3,
-            "price": "150", 
+            "team_size": 5,
+            "price": "250", 
             icon : <RiPresentationFill />, 
             rules: [
                 "Topics from all technical domains are accepted.",
@@ -26,6 +26,8 @@ const eventData = {
                 "Selected teams will be given further details about payment and presentation.",
                 "Paper must be in IEEE format.",
                 "Viva voce will be conducted.",
+                "Team size should be from 3 to 5 members",
+                "The abstract should be submitted before the deadline",
                 "Abstract and presentation should be submitted in a Google form (website or Instagram page).",
                 "The judges' decision will be final."
             ], 
@@ -335,7 +337,7 @@ const eventData = {
                 "MALPRACTICE IN ANY FORM IS STRICTLY PROHIBITED.",
                 "JUDGES' DECISION WILL BE FINAL."],
             prizes: ["Cash Prize for the Winners"],
-            max_reg : 50
+            max_reg : 100
         },
         "Reel Song": { 
             "desc": "Solo Singing is an exhilarating event where participants showcase their vocal prowess and creativity through a 2-minute long video. Each performer will have the freedom to sing in any genre of their choice. Each participant will be judged on their ability to captivate with their voice, pitch perfection and dynamics. Be ready to belt out your best tunes and win over with your talent.",
@@ -377,7 +379,7 @@ const eventData = {
                 "Toxicity is strictly not entertained and will result in elimination of the team."
             ],
             prizes: ["Cash Prize for the Winners"],
-            max_reg : 32
+            max_reg : 100
         },
         "BGMI": { 
             "desc": "Join us for an epic gaming clash filled with breathtaking moments and ruthless competition. Our bracket-style tournament will test the limits of your strategic gameplay and determine who will be crowned the BGMI champion", 
@@ -391,7 +393,7 @@ const eventData = {
                 "ANY USE OF UNFAIR MEANS SUCH AS AIMBOT, TRIGGER BOT, ESP WILL BE DISQUALIFIED.",
                 "WE WILL GIVE 15 MINUTES TIME TO JOIN THE ROOM BEFORE THE MATCH STARTS."], 
             prizes: ["Cash Prize for the Winners"],
-            max_reg : 32
+            max_reg : 25
         },
     },
     "Playground Events": {
@@ -414,7 +416,7 @@ const eventData = {
                 "Only one bouncer per over",
                 "Team not ready or available after 3 calls will be disqualified",
                 "Violence and misbehavior leads to disqualification"], 
-            prizes: ["1000", "500"], max_reg : 32 },
+            prizes: ["1000", "500"], max_reg : 24 },
         "Futsal": { 
             "desc": "Prepare to be on the edge of your seats! Join us for an electrifying evening of Futsal action that’s bound to leave you breathless. Get ready to witness thrilling matches, jaw-dropping footwork, and an intense competition as teams battle it out on the court. The atmosphere will be charged with the spirit of competition and the thunderous roar of the crowd. Don’t miss out on the excitement – mark your calendars, bring your cheers, and come kick it with us! It’s a night that promises goals, glory, and an electrifying experience you won’t soon forget.", 
             "team_size": 7, 
@@ -436,7 +438,7 @@ const eventData = {
                 "1000",
                 "750"
             ],
-            max_reg : 32
+            max_reg : 16
         },
 
     }

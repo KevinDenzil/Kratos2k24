@@ -117,7 +117,7 @@ h1 {
     font-family: 'Dimitri', sans-serif;
     font-weight: 200;
     font-size: 100px;
-    text-shadow: -2px -2px 0 black, 2px -2px 0 black, -4px 4px 0 black, 8px 8px 0 black;
+    /* text-shadow: -2px -2px 0 black, 2px -2px 0 black, -4px 4px 0 black, 8px 8px 0 black; */
   }
 
 /* Styling for the video container */
@@ -376,5 +376,121 @@ h1 {
     50% {
       bottom: 110px; /* Adjusted for mobile */
     }
+  }
+}
+
+/* Existing styles remain the same */
+
+/* Base styles for the info panel and embed-video */
+.panel.info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+.embed-video-container {
+  position: relative;
+  width: 50%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.embed-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.info-content {
+  width: 50%;
+  padding: 2rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Responsive styles for mobile devices */
+@media screen and (max-width: 768px) {
+  .panel.info {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .embed-video-container {
+    width: 100vw; /* Full viewport width */
+    height: 40vh;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+
+  .embed-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This ensures the video covers the container */
+  }
+
+  .info-content {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1.5rem;
+    min-height: 60vh;
+    background-color: rgba(40, 40, 43, 0.9);
+    position: relative;
+    z-index: 2;
+  }
+}
+
+/* Additional adjustments for very small screens */
+@media screen and (max-width: 480px) {
+  .embed-video-container {
+    height: 35vh;
+  }
+
+  .info-content {
+    padding: 1rem;
+  }
+}
+
+/* Landscape mode adjustments */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .embed-video-container {
+    height: 70vh;
+  }
+
+  .info-content {
+    min-height: 30vh;
+  }
+}
+
+/* Gradient overlay for the video container */
+.embed-video-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent 60%,
+    rgba(40, 40, 43, 0.8)
+  );
+  pointer-events: none;
+}
+
+@media screen and (min-width: 769px) {
+  .embed-video-container::after {
+    background: linear-gradient(
+      to right,
+      transparent 60%,
+      rgba(40, 40, 43, 0.8)
+    );
   }
 }

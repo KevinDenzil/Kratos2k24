@@ -67,6 +67,14 @@ const Home = () => {
         </div>
       </section>
       <section ref={addToRefs} className='panel info'>
+      <video autoPlay loop muted playsInline className="embed-video">
+        <source src={`${process.env.PUBLIC_URL}/kratosvid.webm`} type="video/webm" />
+        <source src={`${process.env.PUBLIC_URL}/kratosvid.mp4`} type="video/mp4" />
+        <div className="info-content">
+          <h2>About Kratos '24</h2>
+          <p>Add your description or any other content here</p>
+        </div>
+      </video>
       </section>
       <section ref={addToRefs} className='panel countdown'>
         <h1>STARTS IN</h1>
