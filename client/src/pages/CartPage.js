@@ -52,7 +52,7 @@ const CartPage = () => {
           <div className="empty-cart">
             <p>Your cart is empty</p>
             <button onClick={() => navigate('/')} className="continue-shopping">
-              Continue Shopping
+              Continue Looking
             </button>
           </div>
         ) : (

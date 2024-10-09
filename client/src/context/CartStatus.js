@@ -60,6 +60,12 @@ const CartStatus = ({ children }) => {
     return cart.length > 0 && Object.keys(nestedJson).length === cart.length;
   };
 
+  const clearCart = () => {
+    setNestedJson({});
+    setSubmittedItems({});
+    setTotalPrice(0);
+  };
+
   return (
     <CartContext.Provider value={{ 
       cart, 
@@ -71,7 +77,8 @@ const CartStatus = ({ children }) => {
       setNestedJson,
       setTotalPrice,
       areAllFormsFilled,
-      submittedItems
+      setSubmittedItems,
+      clearCart
     }}>
       {children}
     </CartContext.Provider>

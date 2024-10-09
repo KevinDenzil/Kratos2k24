@@ -45,78 +45,139 @@ nav {
 
 .logo-container {
   position: relative;
-  height: 12vh;
-  margin-top: 6vh;
-}
-
-.logo {
-  height: 100%;
-  animation: float 3s ease-in-out infinite;
-  cursor: pointer;
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+  height: 8vh;
+  display: flex;
+  align-items: center;
 }
 
 .nav_menu {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 3rem;
-
+  flex-grow: 1;
 }
 
-.nav_menu li :hover{
-  color : #B43839;
+.nav_item {
+  position: relative;
 }
 
+.nav_item:last-child {
+  margin-left: auto;
+}
 
-.nav_toggler {
+.nav_link {
+  position: relative;
+  padding-bottom: 5px;
   cursor: pointer;
-  display: none;
 }
 
-.nav_toggler div {
-  width: 2.5rem;
-  height: 0.2rem;
-  margin: 0.4rem;
-  background: white;
-  transition: 0.4s ease-in;
+/* ... (rest of the styles remain the same) ... */
+
+@media screen and (min-width: 769px) {
+  nav {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+  }
+
+  .logo-container {
+    grid-column: 1;
+  }
+
+  .nav_menu {
+    grid-column: 2;
+    justify-content: center;
+  }
+
+  .nav_toggler {
+    grid-column: 3;
+  }
+
+  .nav_item:not(:last-child) {
+    margin-right: 2rem;
+  }
+
+  .nav_item:last-child {
+    margin-left: 2rem;
+  }
 }
 
-.cart-container {
-  display: flex;
-  align-items: center;
+.logo {
+  height: 100%;
   cursor: pointer;
-  color: white;
-  margin-top: 5vh;
+  animation: bob 2s infinite ease-in-out;
 }
+
+@keyframes bob {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+
+
+.nav_item {
+  position: relative;
+}
+
+.nav_link {
+  position: relative;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+
+.nav_link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #B43839;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav_link:hover::after,
+.nav_link.active::after {
+  width: 100%;
+}
+
+
+
 
 .cart-icon {
   font-size: 2.4rem;
+  margin-right: 0.5rem;
+  align-self: right;
 }
 
-.cart-count {
-  background-color: transparent;
+.mobile-logo-text {
+  font-family: 'Neutrons', sans-serif;
   color: white;
-  border-radius: 50%;
-  padding: 0.2rem 0.6rem;
-  font-size: 1.2rem;
-  margin-left: 0.5rem;
+  font-size: 2.4rem;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 769px) {
+  .home-header .logo-container,
+  .normal-header .logo-container {
+    display: flex;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .mobile-logo-text {
+    font-size: 2rem;
+  }
+
   .nav_toggler {
     display: block;
   }
+
   .nav_menu {
     position: fixed;
     top: 8vh;
@@ -125,8 +186,11 @@ nav {
     height: 92vh;
     background: black;
     flex-direction: column;
+    justify-content: flex-start;
     transform: translateX(100%);
     transition: 0.5s ease-in;
+    padding: 2rem;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
   }
 
   .nav_active {
@@ -134,13 +198,29 @@ nav {
   }
   
   .logo-container {
-    height: 10vh;
+    height: 8vh;
   }
+
+  .home-header .logo-container {
+    display: none;
+  }
+
+  .normal-header .logo-container {
+    display: flex;
+  }
+
+  .nav_item {
+    margin: 2rem 0;
+  }
+  .nav_item:last-child {
+    margin-left: 0;
+  }
+
 }
 
 /* Toggler Animation */
 .toggle .line1 {
-  transform: rotate(-45deg) translate(-4px, 5px);
+  transform: rotate(-45deg) translate(-5px, 6px);
 }
 
 .toggle .line2 {
@@ -148,5 +228,66 @@ nav {
 }
 
 .toggle .line3 {
-  transform: rotate(45deg) translate(-4px, -5px);
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Header.css */
+/* ... (previous styles remain the same) ... */
+
+.nav_toggler {
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 21px;
+  z-index: 1000;
+}
+
+.nav_toggler div {
+  width: 100%;
+  height: 3px;
+  background: white;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.nav_toggler .line1 {
+  top: 0;
+}
+
+.nav_toggler .line2 {
+  top: 9px;
+}
+
+.nav_toggler .line3 {
+  bottom: 0;
+}
+
+.toggle .line1 {
+  transform: rotate(45deg);
+  top: 9px;
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(-45deg);
+  bottom: 9px;
+}
+
+/* ... (rest of the styles remain the same) ... */
+
+@media screen and (max-width: 768px) {
+  /* ... (other mobile styles remain the same) ... */
+
+  .nav_toggler {
+    display: block;
+  }
+
+  /* ... (rest of the mobile styles remain the same) ... */
 }

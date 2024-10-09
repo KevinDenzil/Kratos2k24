@@ -13,6 +13,11 @@ body {
     padding: 0;
 }
 
+.logo {
+  scale : 4;
+  margin-top: 15vh;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -290,4 +295,86 @@ h1 {
     .text-box {
         font-size: clamp(60px, 12vw, 200px);
     }
+}
+
+/* Home.css (updated styles for scroll-arrow) */
+.scroll-arrow {
+  position: absolute;
+  bottom: 60px; /* Increased from 40px to move it up */
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 30px;
+  height: 30px;
+  border: solid white;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  animation: bobbing 2s infinite;
+}
+
+.mobile-logo-container {
+  position: absolute;
+  top: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.mobile-logo {
+  width: 100px;
+  height: auto;
+  scale : 2.7;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-logo-container {
+    top: 20vh;
+  }
+
+  .mobile-logo {
+    width: 80px;
+  }
+
+  .text-box {
+    font-size: clamp(80px, 13vw, 150px);
+  }
+}
+
+@keyframes bobbing {
+  0%, 100% {
+    bottom: 60px; /* Adjusted to match the new starting position */
+  }
+  50% {
+    bottom: 70px; /* Adjusted to maintain the same 10px bobbing range */
+  }
+}
+
+/* Responsive styles for the arrow */
+@media screen and (max-width: 768px) {
+  .scroll-arrow {
+    width: 20px;
+    height: 20px;
+    bottom: 100px; /* Adjusted for mobile */
+  }
+
+  @keyframes bobbing {
+    0%, 100% {
+      bottom: 100px; /* Adjusted for mobile */
+    }
+    50% {
+      bottom: 110px; /* Adjusted for mobile */
+    }
+  }
 }

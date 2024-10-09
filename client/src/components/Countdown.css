@@ -101,6 +101,7 @@ footer a {
   .countdown-wrapper {
     scale: 1.2;
     gap: 10px;
+    flex-direction: column;
   }
 
   .countdown-item {

@@ -4,7 +4,7 @@ import { FaUser, FaUserFriends, FaUsers } from "react-icons/fa";
 import { FaIndianRupeeSign } from "react-icons/fa6";
 import './EventCard.css';
 
-const EventCard = ({ eventName, icon, teamSize, price }) => {
+const EventCard = ({ eventName, icon, teamSize, price, status, isClickable }) => {
   const navigate = useNavigate();
 
   const getTeamIcon = (size) => {
@@ -14,12 +14,18 @@ const EventCard = ({ eventName, icon, teamSize, price }) => {
   };
 
   const handleClick = () => {
-    const encodedEventName = encodeURIComponent(eventName);
-    navigate(`/event/${encodedEventName}`);
+    if (isClickable) {
+      const encodedEventName = encodeURIComponent(eventName);
+      navigate(`/event/${encodedEventName}`);
+    }
   };
 
   return (
-    <div className="event-card" onClick={handleClick} onTouchStart={() => {}}>
+    <div 
+      className={`event-card ${!isClickable ? 'disabled' : ''}`} 
+      onClick={handleClick} 
+      onTouchStart={() => {}}
+    >
       <div className="icon-container">
         {icon}
       </div>
@@ -35,6 +41,11 @@ const EventCard = ({ eventName, icon, teamSize, price }) => {
             <span>{price || 'TBD'}</span>
           </div>
         </div>
+        {status && (
+          <div className={`status ${status === "Registrations Closed" ? 'closed' : 'closing'}`}>
+            {status}
+          </div>
+        )}
       </div>
     </div>
   );

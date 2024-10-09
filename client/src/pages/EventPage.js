@@ -1,8 +1,8 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { getEventData } from '../EventDetails';
-import { CartContext } from '../context/CartStatus'; // Adjust the import path as needed
-import { FaUser, FaUserFriends, FaUsers, FaTrophy,FaShoppingCart  } from "react-icons/fa";
+import { CartContext } from '../context/CartStatus';
+import { FaUser, FaUserFriends, FaUsers, FaTrophy, FaShoppingCart } from "react-icons/fa";
 import { FaIndianRupeeSign } from "react-icons/fa6";
 import './EventPage.css';
 
@@ -12,11 +12,22 @@ const EventPage = () => {
   const decodedEventName = decodeURIComponent(eventName);
   const eventDetails = getEventData(decodedEventName);
   const { cart, addToCart } = useContext(CartContext);
+  const [posterSrc, setPosterSrc] = useState(null);
+
+  useEffect(() => {
+    const loadPoster = () => {
+      const imagePath = `${process.env.PUBLIC_URL}/posters/${decodedEventName}.jpg`;
+      setPosterSrc(imagePath);
+    };
+  
+    loadPoster();
+  }, [decodedEventName]);
 
   const isInCart = cart.some(item => item.name === decodedEventName);
+  const isPaperPresentation = decodedEventName === "Paper Presentation";
 
   const handleAddToCart = () => {
-    if (!isInCart) {
+    if (!isInCart && !isPaperPresentation) {
       addToCart({
         name: decodedEventName,
         price: eventDetails.price,
@@ -24,6 +35,10 @@ const EventPage = () => {
         team_size: eventDetails.team_size
       });
     }
+  };
+
+  const handleRegister = () => {
+    window.open('https://docs.google.com/forms/d/e/1FAIpQLSfs8gJJ6GZ-x57UzCjGADsiDysUbRWu49PAeRTDsXrEYJ3iEg/viewform?usp=sf_link', '_blank');
   };
 
   const getTeamIcon = (size) => {
@@ -64,12 +79,14 @@ const EventPage = () => {
       <button className="back-button" onClick={() => navigate(-1)}>
         Go Back
       </button>
-      <div className="event-header">
-        <div className="event-icon">{eventDetails.icon}</div>
-        <h1>{decodedEventName}</h1>
+      <div className="event-poster-container">
+        {posterSrc && <img src={posterSrc} alt={`${decodedEventName} poster`} className="event-poster" />}
       </div>
-
       <div className="event-content">
+        <h1 className="event-title">
+          {eventDetails.icon && <span className="event-icon">{eventDetails.icon}</span>}
+          {decodedEventName}
+        </h1>
         <div className="details-container">
           <div className="detail-row">
             <div className="detail-item">
@@ -129,19 +146,28 @@ const EventPage = () => {
           )}
         </div>
 
-        <button 
-          className={`add-to-cart-btn ${isInCart ? 'added' : ''}`}
-          onClick={handleAddToCart}
-          disabled={isInCart}
-        >
-          {isInCart ? (
-            <>
-              <FaShoppingCart /> In Cart
-            </>
-          ) : (
-            'Add to Cart'
-          )}
-        </button>
+        {isPaperPresentation ? (
+          <button 
+            className="add-to-cart-btn"
+            onClick={handleRegister}
+          >
+            Register
+          </button>
+        ) : (
+          <button 
+            className={`add-to-cart-btn ${isInCart ? 'added' : ''}`}
+            onClick={handleAddToCart}
+            disabled={isInCart}
+          >
+            {isInCart ? (
+              <>
+                <FaShoppingCart /> In Cart
+              </>
+            ) : (
+              'Add to Cart'
+            )}
+          </button>
+        )}
       </div>
     </div>
   );
