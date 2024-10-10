@@ -400,7 +400,7 @@ const eventData = {
         "Box Cricket": { 
             "desc": "Box cricket is a modified indoor version of traditional cricket played in a smaller, enclosed area with fewer players, typically featuring simplified rules to suit the confined space.", 
             "team_size": 6, 
-            "price": "250", 
+            "price": "300", 
             icon:<MdSportsCricket />, 
             rules: [
                 "5 main players + 1 sub",
