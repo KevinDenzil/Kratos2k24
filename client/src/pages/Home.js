@@ -5,6 +5,7 @@ import { useGSAP } from '@gsap/react';
 import Countdown from '../components/Countdown';
 import TransitionContext from '../context/TransitionContext';
 import { isMobile } from 'react-device-detect';
+import { Link } from 'react-router-dom';
 import './Home.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -63,6 +64,9 @@ const Home = () => {
           <div className='text-box'>
             KRATOS'24
           </div>
+          <Link to="/eventspage" className="register-button">
+            Register Now
+          </Link>
           <div className="scroll-arrow"></div>
         </div>
       </section>

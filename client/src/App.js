@@ -12,6 +12,7 @@ import CheckOut from './pages/CheckOut';
 import TransitionComponent from './components/Transition';
 import { TransitionProvider } from './context/TransitionContext';
 import CartPage from './pages/CartPage';
+import EventsPage from './pages/EventsPage';
 import './Global.css'
 
 
@@ -26,6 +27,7 @@ function App() {
           <Route path="/" index element= {<TransitionComponent><Home /></TransitionComponent>} />
           <Route path="/events/:category" element={<TransitionComponent><Events /></TransitionComponent>} />
           <Route path="/event/:eventName" element={<EventPage />} />
+          <Route path="/eventspage" element={<TransitionComponent><EventsPage /></TransitionComponent>} />
           <Route path="/success" element={<Success />} />
           <Route path="/failure" element={<Failure />} />
           <Route path="/checkout" element={<CheckOut />} />

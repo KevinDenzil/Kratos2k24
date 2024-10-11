@@ -494,3 +494,35 @@ h1 {
     );
   }
 }
+
+/* Add these styles to your existing Home.css */
+.register-button {
+  position: absolute;
+  bottom: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  padding: 15px 30px;
+  font-family: 'Dimitri', sans-serif;
+  font-size: 24px;
+  color: white;
+  background-color: #F70E14;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.register-button:hover {
+  background-color: #d50912;
+  transform: translateX(-50%) scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+  .register-button {
+    bottom: 140px;
+    font-size: 20px;
+    padding: 12px 24px;
+  }
+}
