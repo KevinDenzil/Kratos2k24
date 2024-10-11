@@ -87,7 +87,7 @@ const eventData = {
         "Logic break": { 
             "desc": "Logic Break is a coding and puzzle challenge for teams of 1-2 members. Starting with 15 teams, players solve binary, debugging, and clue-based puzzles across three rounds. Success depends on speed and problem-solving skills.", 
             "team_size": 2, 
-            "price": "150",
+            "price": "100",
             icon : <LuCircuitBoard />, 
             rules: {
                 "Round 1": [
