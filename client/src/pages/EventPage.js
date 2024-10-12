@@ -16,6 +16,62 @@ const EventPage = () => {
   const eventDetails = getEventData(decodedEventName);
   const { cart, addToCart } = useContext(CartContext);
   const [posterSrc, setPosterSrc] = useState(null);
+  
+
+  const renderPrizes = () => {
+    if (decodedEventName === 'Title Event') {
+      return (
+        <div className="prizes-section">
+          <h3>Prizes</h3>
+          <div className="prizes-container">
+            <div className="prize-card winner">
+              <FaTrophy className="trophy-icon" />
+              <h4>Trophy</h4>
+              <div className="prize-amount">
+                <span>Mr. Kratos</span>
+              </div>
+            </div>
+            <div className="prize-card winner">
+              <FaTrophy className="trophy-icon" />
+              <h4>Trophy</h4>
+              <div className="prize-amount">
+                <span>Ms. Kratos</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    } else if (eventDetails.prizes && eventDetails.prizes.length > 0) {
+      return (
+        <div className="prizes-section">
+          <h3>Prizes</h3>
+          <div className="prizes-container">
+            {eventDetails.prizes[0] && (
+              <div className="prize-card winner">
+                <FaTrophy className="trophy-icon" />
+                <h4>Winner</h4>
+                <div className="prize-amount">
+                  <FaIndianRupeeSign />
+                  <span>Cash Prize</span>
+                </div>
+              </div>
+            )}
+            {eventDetails.prizes[1] && (
+              <div className="prize-card runner-up">
+                <FaTrophy className="trophy-icon" />
+                <h4>Runner Up</h4>
+                <div className="prize-amount">
+                  <FaIndianRupeeSign />
+                  <span>Cash Prize</span>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      );
+    }
+    return null;
+  };
 
   useEffect(() => {
     const loadPoster = () => {
@@ -128,34 +184,8 @@ const EventPage = () => {
             {renderRules(eventDetails.rules)}
           </div>
 
-          {eventDetails.prizes && eventDetails.prizes.length > 0 && (
-            <div className="prizes-section">
-              <h3>Prizes</h3>
-              <div className="prizes-container">
-                {eventDetails.prizes[0] && (
-                  <div className="prize-card winner">
-                    <FaTrophy className="trophy-icon" />
-                    <h4>Winner</h4>
-                    <div className="prize-amount">
-                      <FaIndianRupeeSign />
-                      {/* <span>{eventDetails.prizes[0]}</span> */}
-                      <span>Cash Prize</span>
-                    </div>
-                  </div>
-                )}
-                {eventDetails.prizes[1] && (
-                  <div className="prize-card runner-up">
-                    <FaTrophy className="trophy-icon" />
-                    <h4>Runner Up</h4>
-                    <div className="prize-amount">
-                      <FaIndianRupeeSign />
-                      {/* <span>{eventDetails.prizes[1]}</span> */}
-                      <span>Cash Prize</span>
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
+          {eventDetails.prizes && eventDetails.prizes.length > 0 && (    
+            renderPrizes()
           )}
         </div>
 

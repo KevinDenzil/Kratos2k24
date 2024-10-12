@@ -151,6 +151,11 @@
   border: 2px solid silver;
 }
 
+/* Add this new style for Title Event prize cards */
+.event-page[data-event="Title Event"] .prize-card {
+  border: 2px solid gold;
+}
+
 .trophy-icon {
   font-size: 2em;
   margin-bottom: 10px;

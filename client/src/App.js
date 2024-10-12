@@ -13,6 +13,7 @@ import TransitionComponent from './components/Transition';
 import { TransitionProvider } from './context/TransitionContext';
 import CartPage from './pages/CartPage';
 import EventsPage from './pages/EventsPage';
+import { Analytics } from '@vercel/analytics/react'
 import './Global.css'
 
 
@@ -35,6 +36,7 @@ function App() {
         </Routes>
       </CartStatus>
       </TransitionProvider>
+      <Analytics />
     </BrowserRouter>
   );
 }

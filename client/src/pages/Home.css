@@ -4,6 +4,12 @@
     font-weight: normal;
     font-style: normal;
   }
+  @font-face {
+    font-family: 'Maximum Voltage';
+    src: url('/public/Maximum Voltage.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
 
   @import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap');
 
@@ -168,7 +174,7 @@ h1 {
 
 }
 
-.text-box {
+/* .text-box {
     position: absolute;
     top: 0;
     left:0;
@@ -185,7 +191,7 @@ h1 {
     font-family: 'Dimitri', sans-serif;
 
     
-}
+} */
 
 .panel {
     height: 100vh;
@@ -245,17 +251,22 @@ h1 {
     background: #000;
     height: 100%;
     width: 100%;
-    color: #FFF;
+    color: #F70E14; /* Fallback color if video doesn't load */
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: clamp(120px, 20vw, 420px); /* Increased base size and clamp values */
+    font-size: clamp(120px, 20vw, 420px);
     font-weight: 900;
     mix-blend-mode: multiply;
-    font-family: 'Dimitri', sans-serif;
+    font-family: 'Maximum Voltage', sans-serif;
     padding: 20px;
     text-align: center;
     line-height: 1;
+    padding-bottom: 15vh; /* Add this line to move the text up */
+}
+
+.background-video:not([poster]) + .text-box {
+  color: #F70E14;
 }
 
 /* Larger screens */
@@ -500,11 +511,12 @@ h1 {
   position: absolute;
   bottom: 120px;
   left: 50%;
+  
   transform: translateX(-50%);
   z-index: 2;
   padding: 15px 30px;
   font-family: 'Dimitri', sans-serif;
-  font-size: 24px;
+  font-size: 20px;
   color: white;
   background-color: #F70E14;
   border: none;

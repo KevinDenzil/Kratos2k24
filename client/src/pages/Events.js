@@ -9,6 +9,9 @@ const Events = () => {
   const category = decodeURIComponent(rawCategory);
   const events = eventData[category];
 
+  console.log('Category:', category);
+  console.log('Events:', events);
+
   const [registrationData, setRegistrationData] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -18,12 +21,13 @@ const Events = () => {
       setLoading(true);
       setError(null);
       try {
-        const response = await fetch('https://prad18.pythonanywhere.com/event-registrations/');
+        const response = await fetch('http://prad18.pythonanywhere.com/event-registrations/');
         if (!response.ok) {
           throw new Error(`Error: ${response.status} ${response.statusText}`);
         }
         const result = await response.json();
         setRegistrationData(result);
+        console.log('Registration Data:', result);
       } catch (err) {
         setError(err.message);
       } finally {
@@ -35,6 +39,7 @@ const Events = () => {
   }, []);
 
   if (!events) {
+    console.log('No events found for category:', category);
     return <div className="events-page"><h1>Category not found!</h1></div>;
   }
 
@@ -43,6 +48,7 @@ const Events = () => {
   }
 
   if (error) {
+    console.error('Error fetching registration data:', error);
     return <div className="events-page"><h1>Error: {error}</h1></div>;
   }
 
@@ -59,6 +65,12 @@ const Events = () => {
             status = "Closing Soon!";
           }
           
+          console.log('Rendering event:', eventName, {
+            ...eventDetails,
+            status,
+            isClickable: status !== "Registrations Closed"
+          });
+          
           return (
             <EventCard
               key={eventName}
@@ -67,7 +79,7 @@ const Events = () => {
               teamSize={eventDetails.team_size}
               price={eventDetails.price}
               status={status}
-              isClickable={status != "Registrations Closed"}
+              isClickable={status !== "Registrations Closed"}
             />
           );
         })}
