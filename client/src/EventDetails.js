@@ -53,7 +53,7 @@ const eventData = {
                   "Based on both teammates' performances, winners will be announced."
                 ]
               }, 
-            prizes: ["500", "300"], max_reg : 50 },
+            prizes: ["500", "300"], max_reg : 50,min_team_size : 2 },
         "Bid for Code Wars": { 
             "desc": "Bid for Code Wars is a thrilling coding event where teams of two — a bidder and a coder — compete in a unique challenge. The bidder sets the stage by choosing or bidding on coding problems, while the coder races against time to solve them. Each round tests both strategy and coding skills in a dynamic, fast-paced environment.", 
             "team_size": 2, 
@@ -83,7 +83,7 @@ const eventData = {
                     "The first team to solve both problems wins."
                 ]
               }, 
-            prizes: ["500", "300"], max_reg : 50  },
+            prizes: ["500", "300"], max_reg : 50, min_team_size : 2  },
         "Logic break": { 
             "desc": "Logic Break is a coding and puzzle challenge for teams of 1-2 members. Starting with 15 teams, players solve binary, debugging, and clue-based puzzles across three rounds. Success depends on speed and problem-solving skills.", 
             "team_size": 2, 
@@ -174,7 +174,7 @@ const eventData = {
                   "Every 1 minute, the teammate at the computer will switch with another teammate."
                 ]
               }, 
-            prizes: ["500", "300"], max_reg : 50  },
+            prizes: ["500", "300"], max_reg : 50, min_team_size : 2 },
         "Bid to Predict": { 
             "desc": "Welcome to an exhilarating mix of technical and non-technical challenges, designed for participants with varying levels of coding knowledge! This two-round event offers a chance for teams to solve fun, interactive tasks that blend problem-solving with machine learning. (NOTE: cheat sheets will be provided for beginners)", 
             "team_size": 3, 
@@ -241,7 +241,7 @@ const eventData = {
                     "The winner would locate where the mystery bag is at, and one of our members would be there at the location. The participants should report to them with the correct vault number and collect the mystery bag (inside the bag there would be a KRATOS flag)."
                 ]
               }, 
-            prizes: ["500", "300"], max_reg : 50}
+            prizes: ["500", "300"], max_reg : 50, min_team_size : 2}
 
     },
     "Non-Technical Events": {
@@ -258,7 +258,7 @@ const eventData = {
                 "Participants are given a time duration of 5-6 minutes.",
                 "Judges decision is final."
             ], 
-            prizes: ["1000", "750"], max_reg : 50 },
+            prizes: ["1000", "750"], max_reg : 50, min_team_size : 4 },
         "Title Event": { 
             "desc": "Compete in a thrilling multi-round challenge testing strength, strategy, and resilience. Each round will eliminate contenders until one emerges victorious, claiming the title of Mr/Ms. Kratos—a symbol of ultimate power and skill! Let the best rise to glory!",
             "team_size": 1,
@@ -283,7 +283,7 @@ const eventData = {
                 "NO SPEAKING OR PROPS ARE ALLOWED DURING THE GAME.",
                 "THE TEAM WITH THE MOST CORRECT GUESSES WITHIN THE ALLOWED TIME WILL WIN.",
                 "JUDGES' DECISION WILL BE FINAL."],
-            prizes: ["500", "250"], max_reg : 50 },
+            prizes: ["500", "250"], max_reg : 50, min_team_size : 3 },
         "Green Screen": { 
             "desc": "In this exciting solo event, participants will be blindfolded and asked to select a random number, which will determine a 3-minute muted movie clip. The twist? The clip will be projected behind them on a green screen, immersing them in the scene without their sight! As the muted clip plays, a judge will offer subtle clues, encouraging the participant to interact and piece together details of the scene using only their intuition and the judge's hints. After the full 3 minutes, the participant must make their best guess, identifying the movie and the exact scene they were part of. Can they solve the mystery without seeing the action unfold? Let the challenge begin!",
             "team_size": 1, 
@@ -317,7 +317,8 @@ const eventData = {
                 "Toxicity is strictly not entertained and will result in elimination of the team."
             ],
             "prizes": ["500", "250"],
-            max_reg : 50
+            max_reg : 50,
+            min_team_size : 2
         }
     },
     "Pre Events": {
