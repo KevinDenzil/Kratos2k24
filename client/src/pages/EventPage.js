@@ -28,14 +28,14 @@ const EventPage = () => {
               <FaTrophy className="trophy-icon" />
               <h4>Trophy</h4>
               <div className="prize-amount">
-                <span>Mr. Kratos</span>
+                <span>Winner</span>
               </div>
             </div>
-            <div className="prize-card winner">
+            <div className="prize-card runner-up">
               <FaTrophy className="trophy-icon" />
               <h4>Trophy</h4>
               <div className="prize-amount">
-                <span>Ms. Kratos</span>
+                <span>Runner Up</span>
               </div>
             </div>
           </div>

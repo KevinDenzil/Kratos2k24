@@ -199,7 +199,7 @@ const eventData = {
             "price": "50",
             icon : <GiCardRandom />, 
             rules: [
-                "Input:  Each round, your bot will receive the opponent's previous move—either \"c\" (cooperate) or \"d\" (defect).",
+                "Input: Each round, your bot will receive the opponent's previous move—either \"c\" (cooperate) or \"d\" (defect).",
                 "Output: Your bot must respond with either \"c\" or \"d\" for the current round.",
                 "Points System:",
                 "Both cooperate : +3 points each.",
@@ -402,12 +402,12 @@ const eventData = {
     "Playground Events": {
         "Box Cricket": { 
             "desc": "Box cricket is a modified indoor version of traditional cricket played in a smaller, enclosed area with fewer players, typically featuring simplified rules to suit the confined space.", 
-            "team_size": 6, 
+            "team_size": 7, 
             "price": "300", 
             icon:<MdSportsCricket />, 
             rules: [
-                "5 main players + 1 sub",
-                "4 overs",
+                "6 main players + 1 sub",
+                "5 overs",
                 "Umpires call final",
                 "Direct catch out",
                 "No LBW",
@@ -419,7 +419,7 @@ const eventData = {
                 "Only one bouncer per over",
                 "Team not ready or available after 3 calls will be disqualified",
                 "Violence and misbehavior leads to disqualification"], 
-            prizes: ["1000", "500"], max_reg : 24, min_team_size : 5 },
+            prizes: ["1000", "500"], max_reg : 24, min_team_size : 6},
         "Futsal": { 
             "desc": "Prepare to be on the edge of your seats! Join us for an electrifying evening of Futsal action that’s bound to leave you breathless. Get ready to witness thrilling matches, jaw-dropping footwork, and an intense competition as teams battle it out on the court. The atmosphere will be charged with the spirit of competition and the thunderous roar of the crowd. Don’t miss out on the excitement – mark your calendars, bring your cheers, and come kick it with us! It’s a night that promises goals, glory, and an electrifying experience you won’t soon forget.", 
             "team_size": 7, 
