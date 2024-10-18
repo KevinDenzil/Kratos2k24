@@ -9,9 +9,6 @@ const Events = () => {
   const category = decodeURIComponent(rawCategory);
   const events = eventData[category];
 
-  console.log('Category:', category);
-  console.log('Events:', events);
-
   const [registrationData, setRegistrationData] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -27,7 +24,6 @@ const Events = () => {
         }
         const result = await response.json();
         setRegistrationData(result);
-        console.log('Registration Data:', result);
       } catch (err) {
         setError(err.message);
       } finally {
@@ -39,7 +35,6 @@ const Events = () => {
   }, []);
 
   if (!events) {
-    console.log('No events found for category:', category);
     return <div className="events-page"><h1>Category not found!</h1></div>;
   }
 
@@ -52,24 +47,40 @@ const Events = () => {
     return <div className="events-page"><h1>Error: {error}</h1></div>;
   }
 
+  const isDeadlinePassed = (deadline) => {
+    if (!deadline) return false;
+    const now = new Date();
+    const deadlineDate = new Date(deadline);
+    return now > deadlineDate;
+  };
+
+  const isClosingSoon = (deadline) => {
+    if (!deadline) return false;
+    const now = new Date();
+    const deadlineDate = new Date(deadline);
+    const oneDayInMs = 24 * 60 * 60 * 1000;
+    return deadlineDate - now <= oneDayInMs && deadlineDate > now;
+  };
+
   return (
     <div className="events-page">
       <h1>{category}</h1>
       <div className="events-container">
         {Object.entries(events).map(([eventName, eventDetails]) => {
           const registrationCount = registrationData[eventName] || 0;
+          const deadlinePassed = isDeadlinePassed(eventDetails.deadline);
+          const closingSoon = isClosingSoon(eventDetails.deadline);
           let status = null;
-          if (eventDetails.max_reg - registrationCount <= 0) {
+          
+          if (deadlinePassed) {
             status = "Registrations Closed";
-          } else if (eventDetails.max_reg - registrationCount < 5) {
+          } else if (eventDetails.max_reg - registrationCount <= 0) {
+            status = "Registrations Closed";
+          } else if (closingSoon || eventDetails.max_reg - registrationCount < 5) {
             status = "Closing Soon!";
           }
           
-          console.log('Rendering event:', eventName, {
-            ...eventDetails,
-            status,
-            isClickable: status !== "Registrations Closed"
-          });
+          const isClickable = status !== "Registrations Closed";
           
           return (
             <EventCard
@@ -79,7 +90,10 @@ const Events = () => {
               teamSize={eventDetails.team_size}
               price={eventDetails.price}
               status={status}
-              isClickable={status !== "Registrations Closed"}
+              isClickable={isClickable}
+              maxRegistrations={eventDetails.max_reg}
+              currentRegistrations={registrationCount}
+              deadline={eventDetails.deadline}
             />
           );
         })}

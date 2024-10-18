@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext, useRef } from 'react';
 import { CartContext } from '../context/CartStatus';
 import './Forms.css';
 
@@ -18,6 +18,9 @@ function Forms({ selectedEvent, onClose }) {
   const [memberCount, setMemberCount] = useState("none");
   const [isLoading, setIsLoading] = useState(false);
   const [errors, setErrors] = useState({});
+
+  const formRef = useRef(null);
+  const fieldRefs = useRef({});
 
   useEffect(() => {
     if (selectedEvent) {
@@ -107,6 +110,12 @@ function Forms({ selectedEvent, onClose }) {
     });
 
     setErrors(newErrors);
+
+    if (Object.keys(newErrors).length > 0) {
+      const firstErrorField = Object.keys(newErrors)[0];
+      fieldRefs.current[firstErrorField]?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
     return Object.keys(newErrors).length === 0;
   };
 
@@ -152,7 +161,7 @@ function Forms({ selectedEvent, onClose }) {
   };
 
   return (
-    <div className="forms-page">
+    <div className="forms-page" ref={formRef}>
       <div className="form-container">
         <div className="form-header">
           <h2>Team Registration Form</h2>
@@ -172,8 +181,10 @@ function Forms({ selectedEvent, onClose }) {
               onChange={handleChange}
               placeholder="Enter your team name"
               required
+              className={errors.team_name ? 'error' : ''}
+              ref={(el) => fieldRefs.current['team_name'] = el}
             />
-            {errors.team_name && <span className="error">{errors.team_name}</span>}
+            {errors.team_name && <span className="error-message">{errors.team_name}</span>}
           </div>
 
           <div className="form-group">
@@ -186,8 +197,10 @@ function Forms({ selectedEvent, onClose }) {
               onChange={handleChange}
               placeholder="Enter team leader's name"
               required
+              className={errors.team_leader ? 'error' : ''}
+              ref={(el) => fieldRefs.current['team_leader'] = el}
             />
-            {errors.team_leader && <span className="error">{errors.team_leader}</span>}
+            {errors.team_leader && <span className="error-message">{errors.team_leader}</span>}
           </div>
 
           <div className="form-group">
@@ -200,8 +213,10 @@ function Forms({ selectedEvent, onClose }) {
               onChange={handleChange}
               placeholder="Enter leader's contact number"
               required
+              className={errors.leader_contact ? 'error' : ''}
+              ref={(el) => fieldRefs.current['leader_contact'] = el}
             />
-            {errors.leader_contact && <span className="error">{errors.leader_contact}</span>}
+            {errors.leader_contact && <span className="error-message">{errors.leader_contact}</span>}
           </div>
 
           <div className="form-group">
@@ -214,8 +229,10 @@ function Forms({ selectedEvent, onClose }) {
               onChange={handleChange}
               placeholder="Enter your email address"
               required
+              className={errors.email ? 'error' : ''}
+              ref={(el) => fieldRefs.current['email'] = el}
             />
-            {errors.email && <span className="error">{errors.email}</span>}
+            {errors.email && <span className="error-message">{errors.email}</span>}
           </div>
 
           <div className="form-group">
@@ -228,8 +245,10 @@ function Forms({ selectedEvent, onClose }) {
               onChange={handleChange}
               placeholder="Enter your college name"
               required
+              className={errors.college_name ? 'error' : ''}
+              ref={(el) => fieldRefs.current['college_name'] = el}
             />
-            {errors.college_name && <span className="error">{errors.college_name}</span>}
+            {errors.college_name && <span className="error-message">{errors.college_name}</span>}
           </div>
 
           {formData.members.map((member, index) => (
@@ -244,8 +263,10 @@ function Forms({ selectedEvent, onClose }) {
                   onChange={(e) => handleMemberChange(index, e)}
                   placeholder={`Enter member ${index + 1} name`}
                   required
+                  className={errors[`member_${index}_name`] ? 'error' : ''}
+                  ref={(el) => fieldRefs.current[`member_${index}_name`] = el}
                 />
-                {errors[`member_${index}_name`] && <span className="error">{errors[`member_${index}_name`]}</span>}
+                {errors[`member_${index}_name`] && <span className="error-message">{errors[`member_${index}_name`]}</span>}
               </div>
               <div className="form-group">
                 <label htmlFor={`member_contact_${index}`}>Member {index + 1} Contact</label>
@@ -257,8 +278,10 @@ function Forms({ selectedEvent, onClose }) {
                   onChange={(e) => handleMemberChange(index, e)}
                   placeholder={`Enter member ${index + 1} contact`}
                   required
+                  className={errors[`member_${index}_contact`] ? 'error' : ''}
+                  ref={(el) => fieldRefs.current[`member_${index}_contact`] = el}
                 />
-                {errors[`member_${index}_contact`] && <span className="error">{errors[`member_${index}_contact`]}</span>}
+                {errors[`member_${index}_contact`] && <span className="error-message">{errors[`member_${index}_contact`]}</span>}
               </div>
             </div>
           ))}

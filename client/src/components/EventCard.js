@@ -4,7 +4,7 @@ import { FaUser, FaUserFriends, FaUsers } from "react-icons/fa";
 import { FaIndianRupeeSign } from "react-icons/fa6";
 import './EventCard.css';
 
-const EventCard = ({ eventName, icon, teamSize, price, status, isClickable }) => {
+const EventCard = ({ eventName, icon, teamSize, price, status, isClickable, maxRegistrations, currentRegistrations, deadline }) => {
   const navigate = useNavigate();
 
   const getTeamIcon = (size) => {
@@ -13,11 +13,33 @@ const EventCard = ({ eventName, icon, teamSize, price, status, isClickable }) =>
     return <FaUsers />;
   };
 
+  const isDeadlinePassed = () => {
+    if (!deadline) return false;
+    const now = new Date();
+    const deadlineDate = new Date(deadline);
+    return now > deadlineDate;
+  };
+
   const handleClick = () => {
-    if (isClickable) {
+    if (isClickable && !isDeadlinePassed()) {
       const encodedEventName = encodeURIComponent(eventName);
       navigate(`/event/${encodedEventName}`);
     }
+  };
+
+  const formatDeadline = (deadline) => {
+    if (!deadline) return '';
+    const date = new Date(deadline);
+    const options = {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: true,
+      timeZone: 'Asia/Kolkata'
+    };
+    return new Intl.DateTimeFormat('en-US', options).format(date) + ' IST';
   };
 
   return (
@@ -46,9 +68,15 @@ const EventCard = ({ eventName, icon, teamSize, price, status, isClickable }) =>
             {status}
           </div>
         )}
+        {deadline && (
+          <div className={`deadline ${isDeadlinePassed() ? 'passed' : ''}`}>
+            Deadline: {formatDeadline(deadline)}
+          </div>
+        )}
       </div>
     </div>
   );
 };
 
 export default EventCard;
+

@@ -29,9 +29,10 @@ const eventData = {
                 "Team size should be from 3 to 5 members",
                 "The abstract should be submitted before the deadline",
                 "Abstract and presentation should be submitted in a Google form (website or Instagram page).",
+                "The deadline to register is the 23rd of October.",
                 "The judges' decision will be final."
             ], 
-            prizes: ["500", "300"], max_reg : 50},
+            prizes: ["500", "300"], max_reg : 50, deadline: "2024-10-23T23:59:00+05:30"},
         "Sql Code Off": { 
             "desc": "SQL Code-off is an online quiz and query writing event in which participants are required to put their knowledge on SQL to clear each round and move on to the next tasks.", 
             "team_size": 2, 
@@ -367,22 +368,22 @@ const eventData = {
                 "VULGARITIES WILL LEAD TO DISQUALIFICATION.",
                 "THE JUDGES' DECISION WILL BE FINAL."],
             prizes: ["400","200"], max_reg : 50 },
-        "Valorant": { 
-            "desc": "Join us for an intense online Valorant tournament where teams battle it out for ultimate glory! Assemble your squad, sharpen your strategies, and prepare to dominate the competition in this thrilling, bracket-style event. The tournament will be conducted in multiple stages, with teams progressing through elimination rounds to claim the top spot. All games will be streamed live, and the excitement will build as only one team will emerge victorious. Who has what it takes to be crowned the Valorant Champions?",
-            "team_size": 5, 
-            "price": "250", 
-            icon : <SiValorant />,
-            rules: [
-                "5 member team.",
-                "Team selection is determined by a coin toss.",
-                "The tournament features a knockout format for matches.",
-                "Teams must adhere to their allotted time slots; failure to do so may result in the opposing team advancing.",
-                "Toxicity is strictly not entertained and will result in elimination of the team."
-            ],
-            prizes: ["Cash Prize for the Winners"],
-            max_reg : 100,
-            min_team_size : 5
-        },
+        // "Valorant": { 
+        //     "desc": "Join us for an intense online Valorant tournament where teams battle it out for ultimate glory! Assemble your squad, sharpen your strategies, and prepare to dominate the competition in this thrilling, bracket-style event. The tournament will be conducted in multiple stages, with teams progressing through elimination rounds to claim the top spot. All games will be streamed live, and the excitement will build as only one team will emerge victorious. Who has what it takes to be crowned the Valorant Champions?",
+        //     "team_size": 5, 
+        //     "price": "250", 
+        //     icon : <SiValorant />,
+        //     rules: [
+        //         "5 member team.",
+        //         "Team selection is determined by a coin toss.",
+        //         "The tournament features a knockout format for matches.",
+        //         "Teams must adhere to their allotted time slots; failure to do so may result in the opposing team advancing.",
+        //         "Toxicity is strictly not entertained and will result in elimination of the team."
+        //     ],
+        //     prizes: ["Cash Prize for the Winners"],
+        //     max_reg : 100,
+        //     min_team_size : 5
+        // },
         "BGMI": { 
             "desc": "Join us for an epic gaming clash filled with breathtaking moments and ruthless competition. Our bracket-style tournament will test the limits of your strategic gameplay and determine who will be crowned the BGMI champion", 
             "team_size": 4, 
@@ -419,7 +420,9 @@ const eventData = {
                 "Only one bouncer per over",
                 "Team not ready or available after 3 calls will be disqualified",
                 "Violence and misbehavior leads to disqualification"], 
-            prizes: ["1000", "500"], max_reg : 24, min_team_size : 6},
+            prizes: ["1000", "500"], max_reg : 24, min_team_size : 6,
+        deadline: "2024-10-18T23:59:00+05:30"
+        },
         "Futsal": { 
             "desc": "Prepare to be on the edge of your seats! Join us for an electrifying evening of Futsal action that’s bound to leave you breathless. Get ready to witness thrilling matches, jaw-dropping footwork, and an intense competition as teams battle it out on the court. The atmosphere will be charged with the spirit of competition and the thunderous roar of the crowd. Don’t miss out on the excitement – mark your calendars, bring your cheers, and come kick it with us! It’s a night that promises goals, glory, and an electrifying experience you won’t soon forget.", 
             "team_size": 7, 

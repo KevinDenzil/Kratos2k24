@@ -114,6 +114,20 @@
     background-color: #000000;
     box-shadow: 0 0 5px rgba(255, 68, 68, 0.3);
   }
+
+.form-group input.error,
+.form-group select.error {
+  border-color: #ff0000;
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+}
+
+.error-message {
+  color: #ff0000;
+  font-size: 0.9em;
+  margin-top: 5px;
+  display: block;
+}
   
   .form-group input::placeholder {
     color: rgba(255, 255, 255, 0.5);
