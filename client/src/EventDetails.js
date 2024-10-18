@@ -421,7 +421,7 @@ const eventData = {
                 "Team not ready or available after 3 calls will be disqualified",
                 "Violence and misbehavior leads to disqualification"], 
             prizes: ["1000", "500"], max_reg : 24, min_team_size : 6,
-        deadline: "2024-10-18T23:59:00+05:30"
+        deadline: "2024-10-18T23:42:00+05:30"
         },
         "Futsal": { 
             "desc": "Prepare to be on the edge of your seats! Join us for an electrifying evening of Futsal action that’s bound to leave you breathless. Get ready to witness thrilling matches, jaw-dropping footwork, and an intense competition as teams battle it out on the court. The atmosphere will be charged with the spirit of competition and the thunderous roar of the crowd. Don’t miss out on the excitement – mark your calendars, bring your cheers, and come kick it with us! It’s a night that promises goals, glory, and an electrifying experience you won’t soon forget.", 
