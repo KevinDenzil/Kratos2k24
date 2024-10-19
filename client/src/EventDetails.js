@@ -217,29 +217,35 @@ const eventData = {
             icon : <GiRobber />, 
             rules: {
                 "round1": [
-                    "Teams receive logs (records) of the hacker's activities and need to figure out:",
-                    "The hacker's IP address (their digital identity).",
-                    "How they broke in.",
-                    "What files they accessed.",
-                    "Hidden within this information is a clue about the location of the mystery bag.",
-                    "They will also have to decode some secret messages and use tools like a network tracker (like Wireshark) to trace where the hacker came from and find the first clue."
+                    "Pen-and-Paper round",
+                    "This round does not involve any tools or software. All analysis will be done on pen and paper.",
+                    "Your task is to analyze a breach report containing logs and find key information, including:",
+                    "Hacker’s IP address",
+                    "How the hacker broke into the system",
+                    "Files accessed or stolen",
+                    "Decode any hidden message or clue to advance to the next round.",
+                    "A cheat sheet will be provided to help you with decoding techniques and log analysis tips.",
                 ],
                 "round2": [
-                    "Participants receive a set of phishing emails along with scenarios involving fake phone calls, text messages, or social media posts.",
-                    "They must analyze the emails for authenticity by checking headers, URLs, and content.",
-                    "Participants will also evaluate the scenarios to determine which messages are legitimate and which are phishing attempts or scams.",
-                    "They need to identify the real email and the genuine messages while avoiding traps.",
-                    "Opening too many fake clues or making wrong decisions will lead to penalties. Participants must test their instincts and knowledge of social engineering tactics to extract the information that leads to the next clue."
+                    "Participants will be given a series of phishing emails, fake text messages, and social media posts presented as part of scenarios.", 
+                    "They must carefully evaluate each one for signs of legitimacy or fraud, focusing on details like:", 
+                    "Email Headers: Check the sender's address, return paths, and authenticity of the email domain.", 
+                    "URLs: Inspect links by hovering over them to see if they lead to suspicious websites.", 
+                    "Content: Look for common phishing traits like urgency, spelling mistakes, and fake branding.",
+                    "Objective : Identify which email or message is authentic and which ones are phishing or scam attempts.",
+                    "Challenge : Opening too many fake messages or choosing incorrect clues will result in penalties, such as a time deduction or score reduction."
                 ],
                 "round3": [
-                    "Ciphered Message: Participants receive a complex ciphered message that includes multiple layers of encryption.",
-                    "Clue Gathering: As they decode the message, they will uncover several hints that may point to different locations or clues about the mystery bag's whereabouts.",
-                    "Analyze the Cipher: Identify the types of ciphers used in the message.",
-                    "Decrypt the Message: Work through the layers of encryption, breaking down the message step-by-step.",
-                    "Coordinate Confirmation: Input the decoded information into a confirmation system to validate their findings.",
-                    "Final Puzzle: After decoding, assemble the decoded pieces of information into a coherent answer (like a riddle or a map that needs to be pieced together). This will give the vault number where the mystery bag is in.",
-                    "Incorrect attempts to decode or input the information will result in significant penalties (like time deductions or loss of points).",
-                    "The winner would locate where the mystery bag is at, and one of our members would be there at the location. The participants should report to them with the correct vault number and collect the mystery bag (inside the bag there would be a KRATOS flag)."
+                    "Participants must solve a series of quiz questions based on deciphering coded messages (a sheet filled with clues will be provided to solve the ciphers).", 
+                    "The questions are divided into three levels of difficulty:", 
+                    "5 Easy Questions", 
+                    "5 Medium Questions", 
+                    "5 Hard Questions", 
+                    "Each question will present a coded message (cipher), and participants must correctly decipher it.", 
+                    "The quiz covers multiple types of ciphers, so participants need to identify and solve them accordingly.", 
+                    "Incorrect answers or failure to solve a question will result in no points for that question.", 
+                    "The total score will be calculated based on the correct answers.", 
+                    "The team with the highest score at the end of the quiz wins."
                 ]
               }, 
             prizes: ["500", "300"], max_reg : 50, min_team_size : 2}
@@ -397,7 +403,8 @@ const eventData = {
                 "WE WILL GIVE 15 MINUTES TIME TO JOIN THE ROOM BEFORE THE MATCH STARTS."], 
             prizes: ["Cash Prize for the Winners"],
             max_reg : 25,
-            min_team_size : 4
+            min_team_size : 4,
+            deadline: "2024-10-19T23:00:00+05:30"
         },
     },
     "Playground Events": {
@@ -420,8 +427,8 @@ const eventData = {
                 "Only one bouncer per over",
                 "Team not ready or available after 3 calls will be disqualified",
                 "Violence and misbehavior leads to disqualification"], 
-            prizes: ["1000", "500"], max_reg : 24, min_team_size : 6,
-        deadline: "2024-10-18T23:59:00+05:30"
+            prizes: ["1000", "500"], max_reg : 1, min_team_size : 6,
+            deadline: "2024-10-18T21:00:00+05:30"
         },
         "Futsal": { 
             "desc": "Prepare to be on the edge of your seats! Join us for an electrifying evening of Futsal action that’s bound to leave you breathless. Get ready to witness thrilling matches, jaw-dropping footwork, and an intense competition as teams battle it out on the court. The atmosphere will be charged with the spirit of competition and the thunderous roar of the crowd. Don’t miss out on the excitement – mark your calendars, bring your cheers, and come kick it with us! It’s a night that promises goals, glory, and an electrifying experience you won’t soon forget.", 
@@ -445,7 +452,8 @@ const eventData = {
                 "750"
             ],
             max_reg : 16,
-            min_team_size : 5
+            min_team_size : 5,
+            deadline: "2024-10-19T23:00:00+05:30"
         },
 
     }
