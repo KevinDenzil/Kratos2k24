@@ -18,7 +18,7 @@ const Events = () => {
       setLoading(true);
       setError(null);
       try {
-        const response = await fetch('http://prad18.pythonanywhere.com/event-registrations/');
+        const response = await fetch('https://prad18.pythonanywhere.com/event-registrations/');
         if (!response.ok) {
           throw new Error(`Error: ${response.status} ${response.statusText}`);
         }
