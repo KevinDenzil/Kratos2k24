@@ -32,7 +32,7 @@ const eventData = {
                 "The deadline to register is the 23rd of October.",
                 "The judges' decision will be final."
             ], 
-            prizes: ["500", "300"], max_reg : 50, deadline: "2024-10-23T23:59:00+05:30"},
+            prizes: ["500", "300"], max_reg : 50, deadline: "2024-10-25T15:00:00+05:30"},
         "Sql Code Off": { 
             "desc": "SQL Code-off is an online quiz and query writing event in which participants are required to put their knowledge on SQL to clear each round and move on to the next tasks.", 
             "team_size": 2, 
@@ -161,14 +161,14 @@ const eventData = {
             "price": "150",
             icon : <FaCodeCompare />, 
             rules: {
-                "round1": [
+                "Round 1": [
                   "Each team consists of a maximum of three members.",
                   "A programming question will be provided to each team.",
                   "Team members will have 5 minutes to look at the problem and discuss how to solve it.",
                   "A total of 10 minutes will be given to each team to solve it.",
                   "Every 1 minute, the teammate at the computer will switch with another teammate."
                 ],
-                "round2": [
+                "Round 2": [
                   "In this round, the number of questions used will vary depending on the total number of teams.",
                   "Each team will be given 20 minutes to solve a problem of medium difficulty.",
                   "Team members will have 5 minutes to look at the problem and discuss how to solve it.",
@@ -182,13 +182,13 @@ const eventData = {
             "price": "50", 
             icon: <FaChartLine />, 
             rules: {
-                    "round1":[
+                    "round 1":[
                         "Connections Puzzle: Teams will receive three folders to work with. In Folder 1, you'll find 10 puzzles where solving each will reveal the name of a dataset.",
                         "Dataset Search: In Folder 2, there are hundreds of datasets. Using the name you uncovered from the puzzles, find the corresponding dataset folder. Inside, you’ll find training and test data, along with a partially completed machine learning code.",
                         "Code Completion: Use the provided cheat sheet to complete the ML code and make predictions.",
                         "Star Plotting: Once predictions are made, go to Folder 3, which contains a CSV file with thousands of records, including model outputs and star coordinates. Use the output to locate the star’s coordinates and plot them on a given interface.",
                         "The teams that plot the most stars accurately will advance to the next round."],
-                    "round2":[
+                    "round 2":[
                         "In this round, teams will have a fixed amount of time (e.g., 1 hour) to participate in a Dataset Auction. Teams will bet their time to secure a dataset.",
                         "Once a dataset is chosen, a problem statement will be provided on the spot, specific to that dataset.",
                         "Teams must complete the task within their remaining time. The winner will be decided based on completion within the time limit, model accuracy, and the approach taken."
@@ -216,7 +216,7 @@ const eventData = {
             "price": "100",
             icon : <GiRobber />, 
             rules: {
-                "round1": [
+                "Round 1": [
                     "Pen-and-Paper round",
                     "This round does not involve any tools or software. All analysis will be done on pen and paper.",
                     "Your task is to analyze a breach report containing logs and find key information, including:",
@@ -226,7 +226,7 @@ const eventData = {
                     "Decode any hidden message or clue to advance to the next round.",
                     "A cheat sheet will be provided to help you with decoding techniques and log analysis tips.",
                 ],
-                "round2": [
+                "round 2": [
                     "Participants will be given a series of phishing emails, fake text messages, and social media posts presented as part of scenarios.", 
                     "They must carefully evaluate each one for signs of legitimacy or fraud, focusing on details like:", 
                     "Email Headers: Check the sender's address, return paths, and authenticity of the email domain.", 
