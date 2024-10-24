@@ -175,7 +175,7 @@ const eventData = {
                   "Every 1 minute, the teammate at the computer will switch with another teammate."
                 ]
               }, 
-            prizes: ["500", "300"], max_reg : 50, min_team_size : 2 },
+            prizes: ["500", "300"], max_reg : 15, min_team_size : 2 },
         "Bid to Predict": { 
             "desc": "Welcome to an exhilarating mix of technical and non-technical challenges, designed for participants with varying levels of coding knowledge! This two-round event offers a chance for teams to solve fun, interactive tasks that blend problem-solving with machine learning. (NOTE: cheat sheets will be provided for beginners)", 
             "team_size": 3, 
