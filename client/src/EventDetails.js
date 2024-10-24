@@ -32,7 +32,7 @@ const eventData = {
                 "The deadline to register is the 23rd of October.",
                 "The judges' decision will be final."
             ], 
-            prizes: ["500", "300"], max_reg : 50, deadline: "2024-10-25T15:00:00+05:30"},
+            prizes: ["500", "300"], max_reg : 50, deadline: "2024-10-25T12:00:00+05:30"},
         "Sql Code Off": { 
             "desc": "SQL Code-off is an online quiz and query writing event in which participants are required to put their knowledge on SQL to clear each round and move on to the next tasks.", 
             "team_size": 2, 
