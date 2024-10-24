@@ -345,7 +345,8 @@ const eventData = {
                 "MALPRACTICE IN ANY FORM IS STRICTLY PROHIBITED.",
                 "JUDGES' DECISION WILL BE FINAL."],
             prizes: ["Cash Prize for the Winners"],
-            max_reg : 100
+            max_reg : 100,
+            deadline: "2024-10-24T10:00:00+05:30"
         },
         "Reel Song": { 
             "desc": "Solo Singing is an exhilarating event where participants showcase their vocal prowess and creativity through a 2-minute long video. Each performer will have the freedom to sing in any genre of their choice. Each participant will be judged on their ability to captivate with their voice, pitch perfection and dynamics. Be ready to belt out your best tunes and win over with your talent.",
@@ -360,7 +361,8 @@ const eventData = {
                 "MAKE SURE THE KARAOKE DOESN'T DOMINATE YOUR VOICE AND THE VOICE MUST BE AUDIBLE.",
                 "VIDEO IS A MUST, AUDIO WITHOUT VIDEO WILL BE DISQUALIFIED."],
             prizes: ["400","200"],
-            max_reg : 50
+            max_reg : 50,
+            deadline: "2024-10-24T10:00:00+05:30"
         },
         "Reel Dance": {
             "desc": "Here is your chance to show off your dancing talent and shake the world with your creativity and passion. Just get ready for the Energetic Challenge.",
@@ -373,7 +375,9 @@ const eventData = {
                 "JUDGING WILL BE DONE BASED ON THE STEPS CLARITY AND FACIAL EXPRESSIONS.",
                 "VULGARITIES WILL LEAD TO DISQUALIFICATION.",
                 "THE JUDGES' DECISION WILL BE FINAL."],
-            prizes: ["400","200"], max_reg : 50 },
+            prizes: ["400","200"], max_reg : 50,
+            deadline: "2024-10-24T10:00:00+05:30" },
+            
         // "Valorant": { 
         //     "desc": "Join us for an intense online Valorant tournament where teams battle it out for ultimate glory! Assemble your squad, sharpen your strategies, and prepare to dominate the competition in this thrilling, bracket-style event. The tournament will be conducted in multiple stages, with teams progressing through elimination rounds to claim the top spot. All games will be streamed live, and the excitement will build as only one team will emerge victorious. Who has what it takes to be crowned the Valorant Champions?",
         //     "team_size": 5, 
@@ -404,7 +408,7 @@ const eventData = {
             prizes: ["Cash Prize for the Winners"],
             max_reg : 25,
             min_team_size : 4,
-            deadline: "2024-10-19T23:00:00+05:30"
+            deadline: "2024-10-24T10:00:00+05:30"
         },
     },
     "Playground Events": {
