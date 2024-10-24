@@ -324,7 +324,7 @@ const eventData = {
                 "Toxicity is strictly not entertained and will result in elimination of the team."
             ],
             "prizes": ["500", "250"],
-            max_reg : 50,
+            max_reg : 12,
             min_team_size : 2
         }
     },
