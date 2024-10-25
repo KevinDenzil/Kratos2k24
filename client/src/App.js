@@ -27,7 +27,7 @@ function App() {
         <Routes>
           <Route path="/" index element= {<TransitionComponent><Home /></TransitionComponent>} />
           <Route path="/events/:category" element={<TransitionComponent><Events /></TransitionComponent>} />
-          <Route path="/event/:eventName" element={<EventPage />} />
+
           <Route path="/eventspage" element={<TransitionComponent><EventsPage /></TransitionComponent>} />
           <Route path="/success" element={<Success />} />
           <Route path="/failure" element={<Failure />} />
