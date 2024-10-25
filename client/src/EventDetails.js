@@ -54,7 +54,7 @@ const eventData = {
                   "Based on both teammates' performances, winners will be announced."
                 ]
               }, 
-            prizes: ["500", "300"], max_reg : 20,min_team_size : 2 },
+            prizes: ["500", "300"], max_reg : 20,min_team_size : 2, deadline: "2024-10-25T19:30:00+05:30" },
         "Bid for Code Wars": { 
             "desc": "Bid for Code Wars is a thrilling coding event where teams of two — a bidder and a coder — compete in a unique challenge. The bidder sets the stage by choosing or bidding on coding problems, while the coder races against time to solve them. Each round tests both strategy and coding skills in a dynamic, fast-paced environment.", 
             "team_size": 2, 
@@ -84,7 +84,7 @@ const eventData = {
                     "The first team to solve both problems wins."
                 ]
               }, 
-            prizes: ["500", "300"], max_reg : 40, min_team_size : 2  },
+            prizes: ["500", "300"], max_reg : 40, min_team_size : 2, deadline: "2024-10-25T19:30:00+05:30" },
         "Logic break": { 
             "desc": "Logic Break is a coding and puzzle challenge for teams of 1-2 members. Starting with 15 teams, players solve binary, debugging, and clue-based puzzles across three rounds. Success depends on speed and problem-solving skills.", 
             "team_size": 2, 
@@ -106,7 +106,7 @@ const eventData = {
                   "The team that finishes first will be declared the winner."
                 ]
               }, 
-            prizes: ["500", "300"], max_reg : 15  },
+            prizes: ["500", "300"], max_reg : 15, deadline: "2024-10-25T19:30:00+05:30"},
         "Technical Fued": { 
             "desc": "Tech Feud is a team competition with each team consisting a maximum of 3 members. It is a game where the teams are asked technical questions for which they have to rebut with the answer that has the maximum points. The team that gets the answer with highest points will have a chance to guess another answer. The team with highest points win.", 
             "team_size": 3, 
@@ -131,7 +131,7 @@ const eventData = {
                   ]
 
             }, 
-            prizes: ["500", "300"], max_reg : 25  },
+            prizes: ["500", "300"], max_reg : 25, deadline: "2024-10-25T19:30:00+05:30" },
         "UI UX Design Battle": { 
             "desc": "UIUX Design Battle is a fun-filled designing event where the event will be structured in two competitive rounds, offering participants the opportunity to showcase their knowledge and design skills. The first round will test participants' understanding of Figma and UI/UX principles through a series of multiple-choice questions. In the second round, selected participants will be given a problem statement and tasked with designing a functional application using Figma.", 
             "team_size": 2, 
@@ -154,7 +154,7 @@ const eventData = {
                   "Judges' decision is final."
                 ]
               }, 
-            prizes: ["500", "300"], max_reg : 27 },
+            prizes: ["500", "300"], max_reg : 27, deadline: "2024-10-25T19:30:00+05:30"},
         "Code Relay": { 
             "desc": "Code Relay is a team competition with each team consisting of 3 members. Each team will be provided with a problem statement and must work together to solve it. Only one team member can code at a time, and after a short, fixed interval, the next teammate will take over, continuing from where the previous coder left off. This process continues till the timer runs out. Teams will be evaluated based on their progress, and those who complete the task or come closest to completing it will advance to the next round. The number of teams progressing will depend on the total number of participants. Effective communication and smooth transitions between teammates are essential for success.", 
             "team_size": 3, 
@@ -175,7 +175,7 @@ const eventData = {
                   "Every 1 minute, the teammate at the computer will switch with another teammate."
                 ]
               }, 
-            prizes: ["500", "300"], max_reg : 15, min_team_size : 2 },
+            prizes: ["500", "300"], max_reg : 15, min_team_size : 2,deadline: "2024-10-25T19:30:00+05:30" },
         "Bid to Predict": { 
             "desc": "Welcome to an exhilarating mix of technical and non-technical challenges, designed for participants with varying levels of coding knowledge! This two-round event offers a chance for teams to solve fun, interactive tasks that blend problem-solving with machine learning. (NOTE: cheat sheets will be provided for beginners)", 
             "team_size": 3, 
@@ -193,7 +193,7 @@ const eventData = {
                         "Once a dataset is chosen, a problem statement will be provided on the spot, specific to that dataset.",
                         "Teams must complete the task within their remaining time. The winner will be decided based on completion within the time limit, model accuracy, and the approach taken."
                     ]}, 
-            prizes: ["500", "300"], max_reg : 25},
+            prizes: ["500", "300"], max_reg : 25, deadline: "2024-10-25T19:30:00+05:30"},
         "The Code Gambit": { 
             "desc": "Welcome to the ultimate test of strategic thinking and coding! In this challenge, you will design and develop a bot that competes against other bots in a series of decision-making rounds. Your objective? Maximize your score by making the right choices over time.", 
             "team_size": 3, 
@@ -209,7 +209,7 @@ const eventData = {
                 "Rounds (for the bots to compete against each other):",
                 "The game runs for 50-200 rounds, simulating long-term strategies. The bot with the highest cumulative score at the end of all matches wins the competition.",
                 "Now, it's time to create a bot that can adapt, outthink, and outscore the competition!"], 
-            prizes: ["500", "300"], max_reg : 25},
+            prizes: ["500", "300"], max_reg : 25,deadline: "2024-10-25T19:30:00+05:30"},
         "Cyber Heist": { 
             "desc": "CYBER HEIST is an exciting team-based event where participants take on the role of detectives to track down a mystery bag hidden by hackers. Teams of two will navigate through four thrilling rounds, starting with investigating a data breach, tracing a hacker’s IP, and uncovering critical clues using tools like Wireshark. The challenge intensifies as participants tackle phishing scams, decode multi-layered ciphers, and solve complex puzzles to reveal the final vault location. The fastest team to solve all the clues and retrieve the mystery bag wins the grand prize.", 
             "team_size": 2, 
@@ -226,7 +226,7 @@ const eventData = {
                     "Decode any hidden message or clue to advance to the next round.",
                     "A cheat sheet will be provided to help you with decoding techniques and log analysis tips.",
                 ],
-                "round 2": [
+                "Round 2": [
                     "Participants will be given a series of phishing emails, fake text messages, and social media posts presented as part of scenarios.", 
                     "They must carefully evaluate each one for signs of legitimacy or fraud, focusing on details like:", 
                     "Email Headers: Check the sender's address, return paths, and authenticity of the email domain.", 
@@ -235,7 +235,7 @@ const eventData = {
                     "Objective : Identify which email or message is authentic and which ones are phishing or scam attempts.",
                     "Challenge : Opening too many fake messages or choosing incorrect clues will result in penalties, such as a time deduction or score reduction."
                 ],
-                "round3": [
+                "Round3": [
                     "Participants must solve a series of quiz questions based on deciphering coded messages (a sheet filled with clues will be provided to solve the ciphers).", 
                     "The questions are divided into three levels of difficulty:", 
                     "5 Easy Questions", 
@@ -248,7 +248,7 @@ const eventData = {
                     "The team with the highest score at the end of the quiz wins."
                 ]
               }, 
-            prizes: ["500", "300"], max_reg : 15, min_team_size : 2}
+            prizes: ["500", "300"], max_reg : 15, min_team_size : 2, deadline: "2024-10-25T19:30:00+05:30"}
 
     },
     "Non-Technical Events": {
@@ -265,7 +265,7 @@ const eventData = {
                 "Participants are given a time duration of 5-6 minutes.",
                 "Judges decision is final."
             ], 
-            prizes: ["1000", "750"], max_reg : 50, min_team_size : 4 },
+            prizes: ["1000", "750"], max_reg : 50, min_team_size : 4, deadline: "2024-10-25T19:30:00+05:30" },
         "Title Event": { 
             "desc": "Compete in a thrilling multi-round challenge testing strength, strategy, and resilience. Each round will eliminate contenders until one emerges victorious, claiming the title of Mr/Ms. Kratos—a symbol of ultimate power and skill! Let the best rise to glory!",
             "team_size": 1,
@@ -277,7 +277,9 @@ const eventData = {
                     "VULGARITY OF ANY SORT WILL LEAD TO IMMEDIATE DISQUALIFICATION.",
                     "JUDGES DECISION IS FINAL.",
                     "THE WINNER WILL BE AWARDED THE TITLE OF MR/MS.KRATOS"],
-            prizes: ["Winner Trophy", "Runner Trophy"] },
+            prizes: ["Winner Trophy", "Runner Trophy"],
+            deadline: "2024-10-25T19:30:00+05:30"
+        },
         "Fem Screen": { 
             "desc": "Screening a short film/ documentary to create awareness about women's empowerment/feminism and asking their thoughts on it followed by a fun event:",
             "team_size": 3,
@@ -290,7 +292,7 @@ const eventData = {
                 "NO SPEAKING OR PROPS ARE ALLOWED DURING THE GAME.",
                 "THE TEAM WITH THE MOST CORRECT GUESSES WITHIN THE ALLOWED TIME WILL WIN.",
                 "JUDGES' DECISION WILL BE FINAL."],
-            prizes: ["500", "250"], max_reg : 50, min_team_size : 3 },
+            prizes: ["500", "250"], max_reg : 50, min_team_size : 3, deadline: "2024-10-25T19:30:00+05:30" },
         "Green Screen": { 
             "desc": "In this exciting solo event, participants will be blindfolded and asked to select a random number, which will determine a 3-minute muted movie clip. The twist? The clip will be projected behind them on a green screen, immersing them in the scene without their sight! As the muted clip plays, a judge will offer subtle clues, encouraging the participant to interact and piece together details of the scene using only their intuition and the judge's hints. After the full 3 minutes, the participant must make their best guess, identifying the movie and the exact scene they were part of. Can they solve the mystery without seeing the action unfold? Let the challenge begin!",
             "team_size": 1, 
@@ -307,7 +309,8 @@ const eventData = {
                 "The judge's decision will be final and up to no discussion."
             ], 
             "prizes": ["500", "250"],
-            max_reg : 50
+            max_reg : 50,
+            deadline: "2024-10-25T19:30:00+05:30"
         },
         "FIFA": { 
             "desc": "Calling all football fanatics! Brace yourselves for the ultimate FIFA event that's set to take the gaming world by storm. Our electrifying FIFA tournament brings together the finest teams for a heart-pounding series of matches, where skills, strategy, and sheer passion collide. Who will rise as the undisputed champions of the virtual pitch? This is not just a tournament, it's an epic battle, a chance to prove your gaming prowess, and a celebration of the beautiful game. Get ready to unleash your inner football legend and seize the glory on the digital field!",
@@ -325,7 +328,8 @@ const eventData = {
             ],
             "prizes": ["500", "250"],
             max_reg : 12,
-            min_team_size : 2
+            min_team_size : 2,
+            deadline: "2024-10-25T19:30:00+05:30"
         }
     },
     "Pre Events": {
