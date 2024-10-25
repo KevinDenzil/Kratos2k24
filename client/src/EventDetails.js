@@ -54,7 +54,7 @@ const eventData = {
                   "Based on both teammates' performances, winners will be announced."
                 ]
               }, 
-            prizes: ["500", "300"], max_reg : 50,min_team_size : 2 },
+            prizes: ["500", "300"], max_reg : 20,min_team_size : 2 },
         "Bid for Code Wars": { 
             "desc": "Bid for Code Wars is a thrilling coding event where teams of two — a bidder and a coder — compete in a unique challenge. The bidder sets the stage by choosing or bidding on coding problems, while the coder races against time to solve them. Each round tests both strategy and coding skills in a dynamic, fast-paced environment.", 
             "team_size": 2, 
@@ -84,7 +84,7 @@ const eventData = {
                     "The first team to solve both problems wins."
                 ]
               }, 
-            prizes: ["500", "300"], max_reg : 50, min_team_size : 2  },
+            prizes: ["500", "300"], max_reg : 40, min_team_size : 2  },
         "Logic break": { 
             "desc": "Logic Break is a coding and puzzle challenge for teams of 1-2 members. Starting with 15 teams, players solve binary, debugging, and clue-based puzzles across three rounds. Success depends on speed and problem-solving skills.", 
             "team_size": 2, 
@@ -106,7 +106,7 @@ const eventData = {
                   "The team that finishes first will be declared the winner."
                 ]
               }, 
-            prizes: ["500", "300"], max_reg : 50  },
+            prizes: ["500", "300"], max_reg : 15  },
         "Technical Fued": { 
             "desc": "Tech Feud is a team competition with each team consisting a maximum of 3 members. It is a game where the teams are asked technical questions for which they have to rebut with the answer that has the maximum points. The team that gets the answer with highest points will have a chance to guess another answer. The team with highest points win.", 
             "team_size": 3, 
@@ -131,7 +131,7 @@ const eventData = {
                   ]
 
             }, 
-            prizes: ["500", "300"], max_reg : 50  },
+            prizes: ["500", "300"], max_reg : 25  },
         "UI UX Design Battle": { 
             "desc": "UIUX Design Battle is a fun-filled designing event where the event will be structured in two competitive rounds, offering participants the opportunity to showcase their knowledge and design skills. The first round will test participants' understanding of Figma and UI/UX principles through a series of multiple-choice questions. In the second round, selected participants will be given a problem statement and tasked with designing a functional application using Figma.", 
             "team_size": 2, 
@@ -154,7 +154,7 @@ const eventData = {
                   "Judges' decision is final."
                 ]
               }, 
-            prizes: ["500", "300"], max_reg : 50  },
+            prizes: ["500", "300"], max_reg : 25  },
         "Code Relay": { 
             "desc": "Code Relay is a team competition with each team consisting of 3 members. Each team will be provided with a problem statement and must work together to solve it. Only one team member can code at a time, and after a short, fixed interval, the next teammate will take over, continuing from where the previous coder left off. This process continues till the timer runs out. Teams will be evaluated based on their progress, and those who complete the task or come closest to completing it will advance to the next round. The number of teams progressing will depend on the total number of participants. Effective communication and smooth transitions between teammates are essential for success.", 
             "team_size": 3, 
@@ -193,7 +193,7 @@ const eventData = {
                         "Once a dataset is chosen, a problem statement will be provided on the spot, specific to that dataset.",
                         "Teams must complete the task within their remaining time. The winner will be decided based on completion within the time limit, model accuracy, and the approach taken."
                     ]}, 
-            prizes: ["500", "300"], max_reg : 50},
+            prizes: ["500", "300"], max_reg : 25},
         "The Code Gambit": { 
             "desc": "Welcome to the ultimate test of strategic thinking and coding! In this challenge, you will design and develop a bot that competes against other bots in a series of decision-making rounds. Your objective? Maximize your score by making the right choices over time.", 
             "team_size": 3, 
@@ -209,7 +209,7 @@ const eventData = {
                 "Rounds (for the bots to compete against each other):",
                 "The game runs for 50-200 rounds, simulating long-term strategies. The bot with the highest cumulative score at the end of all matches wins the competition.",
                 "Now, it's time to create a bot that can adapt, outthink, and outscore the competition!"], 
-            prizes: ["500", "300"], max_reg : 50},
+            prizes: ["500", "300"], max_reg : 25},
         "Cyber Heist": { 
             "desc": "CYBER HEIST is an exciting team-based event where participants take on the role of detectives to track down a mystery bag hidden by hackers. Teams of two will navigate through four thrilling rounds, starting with investigating a data breach, tracing a hacker’s IP, and uncovering critical clues using tools like Wireshark. The challenge intensifies as participants tackle phishing scams, decode multi-layered ciphers, and solve complex puzzles to reveal the final vault location. The fastest team to solve all the clues and retrieve the mystery bag wins the grand prize.", 
             "team_size": 2, 
@@ -248,7 +248,7 @@ const eventData = {
                     "The team with the highest score at the end of the quiz wins."
                 ]
               }, 
-            prizes: ["500", "300"], max_reg : 50, min_team_size : 2}
+            prizes: ["500", "300"], max_reg : 15, min_team_size : 2}
 
     },
     "Non-Technical Events": {
