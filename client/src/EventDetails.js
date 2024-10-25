@@ -154,7 +154,7 @@ const eventData = {
                   "Judges' decision is final."
                 ]
               }, 
-            prizes: ["500", "300"], max_reg : 25  },
+            prizes: ["500", "300"], max_reg : 27 },
         "Code Relay": { 
             "desc": "Code Relay is a team competition with each team consisting of 3 members. Each team will be provided with a problem statement and must work together to solve it. Only one team member can code at a time, and after a short, fixed interval, the next teammate will take over, continuing from where the previous coder left off. This process continues till the timer runs out. Teams will be evaluated based on their progress, and those who complete the task or come closest to completing it will advance to the next round. The number of teams progressing will depend on the total number of participants. Effective communication and smooth transitions between teammates are essential for success.", 
             "team_size": 3, 
